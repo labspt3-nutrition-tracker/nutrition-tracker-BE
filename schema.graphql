@@ -6,12 +6,15 @@ type User {
   userType: String!
   calorieGoal: Int!
   weight: Int
+  foodEntries: [FoodEntry!]!
+  exerciseEntries: [ExerciseEntry!]!
 }
 
 type Food {
   name: String!
   caloriesPerServ: Int!
   category: Category!
+  FoodEntries: [FoodEntry!]!
 }
 
 type FoodEntry {
@@ -24,10 +27,12 @@ type FoodEntry {
 
 type Category {
   name: String!
+  foods: [Food!]!
 }
 
 type MealCategory {
   name: String!
+  foodEntries: [FoodEntry!]!
 }
 
 type ExerciseEntry {
