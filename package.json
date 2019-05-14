@@ -4,5 +4,18 @@
   "main": "index.js",
   "repository": "git@github.com:labspt3-nutrition-tracker/nutrition-tracker-BE.git",
   "author": "david-chua <dp_chua@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.5.0",
+    "dotenv": "^8.0.0",
+    "google-auth-library": "^4.0.0",
+    "graphql": "^14.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
 }
