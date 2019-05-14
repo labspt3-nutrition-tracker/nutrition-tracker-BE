@@ -19,3 +19,11 @@ type FoodEntry {
   servingQty: Int!
   mealCategory: MealCategory!
 }
+
+type Category {
+  name: String!
+}
+
+type MealCategory {
+  name: String!
+}
