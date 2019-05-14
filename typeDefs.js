@@ -5,7 +5,6 @@ module.exports = gql`
     _id: ID
     name: String
     email: String
-    picture: String
   }
 
   type Query {
