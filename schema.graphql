@@ -5,3 +5,17 @@ type User {
   calorieGoal: Int!
   weight: Int
 }
+
+type Food {
+  name: String!
+  caloriesPerServ: Int!
+  category: Category!
+}
+
+type FoodEntry {
+  date: DateTime!
+  food: Food!
+  user: User!
+  servingQty: Int!
+  mealCategory: MealCategory!
+}
