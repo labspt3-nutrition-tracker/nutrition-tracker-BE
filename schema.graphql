@@ -1,0 +1,7 @@
+type User {
+  name: String!
+  email: String!
+  userType: String!
+  calorieGoal: Int!
+  weight: Int
+}
