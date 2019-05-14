@@ -1,0 +1,8 @@
+{
+  "name": "nutrition-tracker-BE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:labspt3-nutrition-tracker/nutrition-tracker-BE.git",
+  "author": "david-chua <dp_chua@hotmail.com>",
+  "license": "MIT"
+}
