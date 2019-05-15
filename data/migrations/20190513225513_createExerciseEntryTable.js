@@ -3,13 +3,13 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('exerciseEntries', tbl => {
     tbl.increments();
     tbl
-      .date('exercise_entry_date')
+      .date('exerciseEntryDate')
       .notNullable();
     tbl
       .string('exerciseName', 255)
       .notNullable();
     tbl
-      .integer('calories_burned')
+      .integer('caloriesBurned')
       .notNullable();
     tbl
       .integer('exercise_entry_user_id')
@@ -17,7 +17,8 @@ exports.up = function(knex, Promise) {
       .references('id')
       .inTable('users')
       .onDelete('CASCADE')
-      .onUpdate('CASCADE');
+      .onUpdate('CASCADE')
+      .notNullable();
   })
 };
 

@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       .date('date')
       .notNullable();
     tbl
-      .float('serving_qty')
+      .float('servingQty')
       .notNullable();
     tbl
       .integer('food_id')

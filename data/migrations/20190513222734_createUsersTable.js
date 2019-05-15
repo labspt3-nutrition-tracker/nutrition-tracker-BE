@@ -10,11 +10,13 @@ exports.up = function(knex, Promise) {
       .string('username', 255)
       .unique();
     tbl
-      .string('name', 255);
+      .string('firstName', 255);
     tbl
-      .string('user_type');
+      .string('lastName', 255);
     tbl
-      .integer('calorie_goal');
+      .string('userType');
+    tbl
+      .integer('calorieGoal');
     tbl
       .float('weight');
   })

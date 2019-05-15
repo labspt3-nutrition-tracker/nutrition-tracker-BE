@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       .string('foodName',255)
       .notNullable();
     tbl
-      .integer('calories_per_serving')
+      .integer('caloriesPerServ')
       .notNullable();
   });
 };
