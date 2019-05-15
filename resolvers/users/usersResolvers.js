@@ -35,11 +35,17 @@ module.exports = {
     // Add in typeDefs.js
     // type Mutation {
     //  deleteUser(userId: ID!): Int
+    //  updateUser(userId: ID!, user: User!): User
     // }
 
     deleteUser: async (root, args, ctx) => {
       const count = await User.remove(args.userId);
       return count;
+    },
+
+    updateUser: async (root, args, ctx) => {
+      const user = await User.edit(args.userId, args.user);
+      return user;
     }
   }
 };
