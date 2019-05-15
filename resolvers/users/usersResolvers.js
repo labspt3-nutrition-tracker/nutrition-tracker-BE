@@ -29,5 +29,17 @@ module.exports = {
       const user = await User.findById(args.userId);
       return user;
     }
+  },
+
+  Mutation: {
+    // Add in typeDefs.js
+    // type Mutation {
+    //  deleteUser(userId: ID!): Int
+    // }
+
+    deleteUser: async (root, args, ctx) => {
+      const count = await User.remove(args.userId);
+      return count;
+    }
   }
 };
