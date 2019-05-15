@@ -15,6 +15,7 @@ module.exports = {
     // type Query {
     //   getCurrentUser: User
     //   getUsers: [User]
+    //   getUserById(userId: ID!): User
     // }
 
     getCurrentUser: authenticated((root, args, ctx) => ctx.currentUser),
@@ -22,6 +23,11 @@ module.exports = {
     getUsers: async (root, args, ctx) => {
       const users = await User.getAll();
       return users;
+    },
+
+    getUserById: async (root, args, ctx) => {
+      const user = await User.findById(args.userId);
+      return user;
     }
   }
 };
