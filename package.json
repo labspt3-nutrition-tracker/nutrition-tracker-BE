@@ -4,5 +4,10 @@
   "main": "index.js",
   "repository": "git@github.com:labspt3-nutrition-tracker/nutrition-tracker-BE.git",
   "author": "david-chua <dp_chua@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.16.5",
+    "pg": "^7.11.0",
+    "sqlite3": "^4.0.8"
+  }
 }
