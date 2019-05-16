@@ -17,5 +17,22 @@ module.exports = {
       const entry = await ExerciseEntry.findById(args.id);
       return entry;
     }
+  },
+
+  Mutation: {
+    addExerciseEntry: async (root, args, ctx) => {
+      const newExerciseEntry = await ExerciseEntry.add(args.newEntry);
+      return newExerciseEntry;
+    },
+
+    updateExerciseEntry: async (root, args, ctx) => {
+      const exerciseEntry = await ExerciseEntry.edit(args.id, args.changes);
+      return exerciseEntry;
+    },
+
+    deleteExerciseEntry: async (root, args, ctx) => {
+      const deletedCount = await ExerciseEntry.remove(args.id);
+      return deletedCount;
+    }
   }
 };
