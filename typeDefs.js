@@ -24,7 +24,7 @@ module.exports = gql`
 
   type FoodEntry {
     id: ID!
-    date: DateTime!
+    date: String!
     food: Food!
     user: User!
     servingQty: Int!
@@ -45,7 +45,7 @@ module.exports = gql`
 
   type ExerciseEntry {
     id: ID!
-    date: DateTime!
+    date: String!
     name: String!
     caloriesBurned: Int!
     user: User!
