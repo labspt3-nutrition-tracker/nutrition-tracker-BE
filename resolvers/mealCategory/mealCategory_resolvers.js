@@ -17,5 +17,22 @@ module.exports = {
       const category = await MealCategory.findById(args.id);
       return category;
     }
+  },
+
+  Mutation: {
+    addMealCategory: async (root, args, ctx) => {
+      const newCategory = await MealCategory.add(args.newCategory);
+      return newCategory;
+    },
+
+    updateMealCategory: async (root, args, ctx) => {
+      const category = await MealCategory.edit(args.id, args.changes);
+      return category;
+    },
+
+    deleteMealCategory: async (root, args, ctx) => {
+      const deletedCount = await MealCategory.remove(args.id);
+      return deletedCount;
+    }
   }
 };
