@@ -20,7 +20,7 @@ module.exports = {
       const foodCategory = await FoodCategory.findById(args.foodEntryID);
       return foodCategory;
     },
-    FoodCategory: async{
+    FoodCategory: async {
       food(root, args, ctx) => {
         const foods = await FoodCategory.findBy({id: root.id})
       }
