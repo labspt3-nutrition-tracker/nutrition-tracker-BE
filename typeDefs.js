@@ -2,6 +2,7 @@ const { gql } = require("apollo-server");
 
 module.exports = gql`
   type User {
+    id: ID!
     firstName: String!
     lastName: String!
     username: String!
@@ -14,6 +15,7 @@ module.exports = gql`
   }
 
   type Food {
+    id: ID!
     name: String!
     caloriesPerServ: Int!
     category: Category!
@@ -21,7 +23,8 @@ module.exports = gql`
   }
 
   type FoodEntry {
-    date: DateTime!
+    id: ID!
+    date: String!
     food: Food!
     user: User!
     servingQty: Int!
@@ -29,17 +32,20 @@ module.exports = gql`
   }
 
   type Category {
+    id: ID!
     name: String!
     foods: [Food!]!
   }
 
   type MealCategory {
+    id: ID!
     name: String!
     foodEntries: [FoodEntry!]!
   }
 
   type ExerciseEntry {
-    date: DateTime!
+    id: ID!
+    date: String!
     name: String!
     caloriesBurned: Int!
     user: User!
