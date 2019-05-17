@@ -22,7 +22,7 @@ module.exports = {
   },
   ExerciseEntry: {
     user: async (root, args, ctx, info) => {
-      const user = await Users.findBy({id: root.exercise_entry_user_id})
+      const user = await Users.findById( root.exercise_entry_user_id)
       console.log("seeing users", user)
       return user
     }
