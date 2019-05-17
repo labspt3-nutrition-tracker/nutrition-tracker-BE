@@ -6,7 +6,7 @@
   "author": "david-chua <dp_chua@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "server": "nodemon index.js"
   },
   "dependencies": {

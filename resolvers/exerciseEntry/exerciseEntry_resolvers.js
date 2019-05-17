@@ -4,7 +4,9 @@ const ExerciseEntry = require("../../models/exerciseEntriesModel");
 module.exports = {
   Query: {
     getExerciseEntries: async (root, args, ctx) => {
+      console.log("hello");
       const entries = await ExerciseEntry.getAll();
+      console.log(entries);
       return entries;
     },
 
@@ -14,6 +16,7 @@ module.exports = {
     },
 
     getExerciseEntryById: async (root, args, ctx) => {
+      console.log(args);
       const entry = await ExerciseEntry.findById(args.id);
       return entry;
     }
