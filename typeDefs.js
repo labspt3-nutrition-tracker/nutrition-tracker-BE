@@ -5,7 +5,8 @@ module.exports = gql`
     getExerciseEntries: [ExerciseEntry!]!
     getExerciseEntryBy(filter: String!): ExerciseEntry!
     getExerciseEntryById(id: ID!): ExerciseEntry!
-    # user: User!
+
+
 
     # getFoods: [Food!]!
     # getFoodById(foodId: ID!): Food!
@@ -25,6 +26,10 @@ module.exports = gql`
 
     # getFoodEntries: [FoodEntry!]!
     # getFoodEntriesById(id: ID!): FoodEntry!
+  },
+
+  type ExerciseEntryUser{
+    user: User!
   }
 
   type Mutation {
@@ -106,6 +111,6 @@ module.exports = gql`
     date: String!
     name: String!
     caloriesBurned: Int!
-    # user: User!
+    user: Int!
   }
 `;
