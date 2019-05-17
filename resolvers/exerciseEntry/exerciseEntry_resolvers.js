@@ -4,9 +4,8 @@ const ExerciseEntry = require("../../models/exerciseEntriesModel");
 module.exports = {
   Query: {
     getExerciseEntries: async (root, args, ctx) => {
-      console.log("hello");
       const entries = await ExerciseEntry.getAll();
-      console.log(entries);
+
       return entries;
     },
 
@@ -20,6 +19,12 @@ module.exports = {
       const entry = await ExerciseEntry.findById(args.id);
       return entry;
     }
+
+    // user() {
+    //   return {
+
+    //   }
+    // }
   },
 
   Mutation: {
@@ -38,4 +43,11 @@ module.exports = {
       return deletedCount;
     }
   }
+
+  // ExerciseEntry: {
+  //   user: async (root, args, ctx) => {
+  //     const user = await ExerciseEntry.findBy({ id: root.id });
+  //     return user;
+  //   }
+  // }
 };

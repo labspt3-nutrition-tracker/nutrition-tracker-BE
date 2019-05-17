@@ -23,6 +23,7 @@ module.exports = {
     FoodCategory: {
       food: async (root, args, ctx) => {
         const foods = await FoodCategory.findBy({ id: root.id });
+        return foods;
       }
     }
   },
