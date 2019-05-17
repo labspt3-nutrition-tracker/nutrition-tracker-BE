@@ -5,6 +5,7 @@ module.exports = {
   Query: {
     getExerciseEntries: async (root, args, ctx) => {
       const entries = await ExerciseEntry.getAll();
+
       return entries;
     },
 
@@ -14,9 +15,16 @@ module.exports = {
     },
 
     getExerciseEntryById: async (root, args, ctx) => {
+      console.log(args);
       const entry = await ExerciseEntry.findById(args.id);
       return entry;
     }
+
+    // user() {
+    //   return {
+
+    //   }
+    // }
   },
 
   Mutation: {
@@ -35,4 +43,11 @@ module.exports = {
       return deletedCount;
     }
   }
+
+  // ExerciseEntry: {
+  //   user: async (root, args, ctx) => {
+  //     const user = await ExerciseEntry.findBy({ id: root.id });
+  //     return user;
+  //   }
+  // }
 };
