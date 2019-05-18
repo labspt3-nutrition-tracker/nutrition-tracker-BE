@@ -13,7 +13,7 @@ const authenticated = next => (root, args, ctx, info) => {
 
 // Add in typeDefs.js
 // type Query {
-//   getUserBy(filter: String!, value: String!): [User!]
+//   getUserBy(filter: String!): [User!]
 // }
 // type Mutation {
 //  addUser(input: UserInput!): User!
@@ -53,7 +53,7 @@ module.exports = {
     },
 
     getUserBy: async (root, args, ctx) => {
-      const user = await User.findBy({ [args.filter]: args.value });
+      const user = await User.findBy(args.filter);
       console.log({ user });
       return user;
     },
