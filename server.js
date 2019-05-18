@@ -1,5 +1,4 @@
 const { ApolloServer } = require("apollo-server");
-const GMR = require("graphql-merge-resolvers");
 
 const typeDefs = require("./typeDefs");
 // const resolvers = require("./resolvers/index");
