@@ -25,7 +25,6 @@ function findById(id){
 
 async function add(food){
   const [ id ] = await db('foods').insert(food, "id");
-
   return findById(id);
 };
 

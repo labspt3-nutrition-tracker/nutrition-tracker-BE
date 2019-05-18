@@ -2,13 +2,12 @@ const { gql } = require("apollo-server");
 
 module.exports = gql`
   type Query {
-    getExerciseEntries: [ExerciseEntry!]!
-    getExerciseEntryBy(filter: String!): ExerciseEntry!
-    getExerciseEntryById(id: ID!): ExerciseEntry!
-    # user: User!
+    # getExerciseEntries: [ExerciseEntry!]!
+    # getExerciseEntryBy(filter: String!): ExerciseEntry!
+    # getExerciseEntryById(id: ID!): ExerciseEntry!
 
-    # getFoods: [Food!]!
-    # getFoodById(foodId: ID!): Food!
+    getFoods: [Food!]!
+    getFoodById(foodId: ID!): Food!
 
     # getMealCategories: [MealCategory!]!
     # getMealCategoryBy(filter: String!): MealCategory!
@@ -28,13 +27,13 @@ module.exports = gql`
   }
 
   type Mutation {
-    addExerciseEntry(input: ExerciseEntryInput!): ExerciseEntry!
-    updateExerciseEntry(id: ID!, input: ExerciseEntryInput!): ExerciseEntry!
-    deleteExerciseEntry(id: ID!): Int!
+    # addExerciseEntry(input: ExerciseEntryInput!): ExerciseEntry!
+    # updateExerciseEntry(id: ID!, input: ExerciseEntryInput!): ExerciseEntry!
+    # deleteExerciseEntry(id: ID!): Int!
 
-    # addFood(food: Food!): Food!
-    # updateFood(foodId: ID!, food: Food!): Food!
-    # deleteFood(foodId: ID!): Int!
+    addFood(input: FoodInput!): Food!
+    updateFood(id: ID!, input: FoodInput!): Food!
+    deleteFood(id: ID!): Int!
 
     # addMealCategory(newCategory: MealCategory!): MealCategory!
     # updateMealCategory(id: ID!, changes: MealCategory!): MealCategory!
@@ -67,10 +66,10 @@ module.exports = gql`
 
   type Food {
     id: ID!
-    name: String!
+    foodName: String!
     caloriesPerServ: Int!
-    category: FoodCategory!
-    FoodEntries: [FoodEntry!]!
+    food_category_id: FoodCategory!
+    foodEntries: [FoodEntry!]!
   }
 
   type FoodEntry {
@@ -84,7 +83,7 @@ module.exports = gql`
 
   type FoodCategory {
     id: ID!
-    name: String!
+    foodCategoryName: String!
     foods: [Food!]!
   }
 
@@ -96,16 +95,22 @@ module.exports = gql`
 
   type ExerciseEntry {
     id: ID!
-    date: String!
-    name: String!
+    exerciseEntryDate: String!
+    exerciseName: String!
     caloriesBurned: Int!
     user: User!
   }
 
   input ExerciseEntryInput {
-    date: String!
-    name: String!
+    exerciseEntryDate: String!
+    exerciseName: String!
     caloriesBurned: Int!
-    # user: User!
+    exercise_entry_user_id: ID!
+  }
+
+  input FoodInput{
+    foodName: String!
+    caloriesPerServ: Int!
+    food_category_id: ID!
   }
 `;
