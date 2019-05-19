@@ -73,6 +73,10 @@ module.exports = {
     exerciseEntries: async (root, args, ctx, info) => {
       const entries = await ExerciseEntry.findBy({ exercise_entry_user_id: root.id });
       return entries;
+    },
+    foodEntries: async (root, args, ctx, info) => {
+      const entries = await FoodEntry.findBy({ user_id: root.id });
+      return entries;
     }
   },
 
