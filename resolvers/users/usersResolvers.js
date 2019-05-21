@@ -11,17 +11,35 @@ const authenticated = next => (root, args, ctx, info) => {
   return next(root, args, ctx, info);
 };
 
+// Add in typeDefs.js
+// type Query {
+//   getUserBy(filter: String!): [User!]
+// }
+// type Mutation {
+//  addUser(input: UserInput!): User!
+//  updateUser(userId: ID!, input: UpdateUserInput!): User!
+// }
+// input UserInput {
+//   firstName: String!
+//   lastName: String!
+//   username: String!
+//   email: String!
+//   userType: String!
+//   calorieGoal: Int!
+//   weight: Int!
+// }
+// input UpdateUserInput {
+//   firstName: String
+//   lastName: String
+//   username: String
+//   email: String
+//   userType: String
+//   calorieGoal: Int
+//   weight: Int
+// }
+
 module.exports = {
   Query: {
-    // Add in typeDefs.js
-    // type Query {
-    //   getCurrentUser: User
-    //   getUsers: [User]
-    //   getUserById(userId: ID!): User
-    //   getFoodEntries(userId: ID!): FoodEntry!
-    //   getExerciseEntries(userId: ID!): ExerciseEntry!
-    // }
-
     getCurrentUser: authenticated((root, args, ctx) => ctx.currentUser),
 
     getUsers: async (root, args, ctx) => {
@@ -34,31 +52,45 @@ module.exports = {
       return user;
     },
 
-    getFoodEntries: async (root, args, ctx) => {
+    getUserBy: async (root, args, ctx) => {
+      const user = await User.findBy(args.filter);
+      console.log({ user });
+      return user;
+    },
+
+    getFoodEntriesByUserId: async (root, args, ctx) => {
       const entries = await FoodEntry.findBy({ user_id: args.userId });
       return entries;
     },
 
-    getExerciseEntries: async (root, args, ctx) => {
+    getExerciseEntriesByUserId: async (root, args, ctx) => {
       const entries = await ExerciseEntry.findBy({ user_id: args.userId });
       return entries;
     }
   },
 
-  Mutation: {
-    // Add in typeDefs.js
-    // type Mutation {
-    //  deleteUser(userId: ID!): Int
-    //  updateUser(userId: ID!, user: User!): User
-    // }
+  User: {
+    exerciseEntries: async (root, args, ctx, info) => {
+      const entries = await ExerciseEntry.findBy({ exercise_entry_user_id: root.id });
+      return entries;
+    },
+    foodEntries: async (root, args, ctx, info) => {
+      const entries = await FoodEntry.findBy({ user_id: root.id });
+      return entries;
+    }
+  },
 
+  Mutation: {
+    addUser: async (root, args, ctx) => {
+      const newUSer = await User.add(args.input);
+      return newUSer;
+    },
     deleteUser: async (root, args, ctx) => {
       const count = await User.remove(args.userId);
       return count;
     },
-
     updateUser: async (root, args, ctx) => {
-      const user = await User.edit(args.userId, args.user);
+      const user = await User.edit(args.userId, args.input);
       return user;
     }
   }

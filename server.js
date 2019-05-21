@@ -5,22 +5,11 @@ const typeDefs = require("./typeDefs");
 const { findOrCreateUser } = require("./controllers/userController");
 
 //* import resolvers
-const exerciseResolver = require("./resolvers/exerciseEntry/exerciseEntry_resolvers");
-const foodResolver = require("./resolvers/foods/foodsResolvers");
-const mealCatResolver = require("./resolvers/mealCategory/mealCategory_resolvers");
-const userResolver = require("./resolvers/users/usersResolvers");
-const foodCatResolver = require("./resolvers/foodCategory");
-const foodEntryResolver = require("./resolvers/foodEntry");
+const resolvers = require("./resolvers");
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers: exerciseResolver,
-  // foodResolver,
-  // mealCatResolver,
-  // userResolver,
-  // foodCatResolver,
-  // foodEntryResolver
-  // },
+  resolvers,
   context: async ({ req }) => {
     let authToken = null;
     let currentUser = null;
