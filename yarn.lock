@@ -1494,6 +1494,11 @@ graphql-extensions@0.6.0:
   dependencies:
     "@apollographql/apollo-tools" "^0.3.6-alpha.1"
 
+graphql-merge-resolvers@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/graphql-merge-resolvers/-/graphql-merge-resolvers-1.1.10.tgz#c93fc45fda768a9e933a8c6ac53dd5c42faf51bb"
+  integrity sha512-I7pDBZdyNOZkSdGtj6J4RyFwZCYppkWe3afbgkCKFbSbIbrMacdLtJpD42CgLOn59q4KdgLfGwgPMu4QePDnzA==
+
 graphql-subscriptions@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/graphql-subscriptions/-/graphql-subscriptions-1.1.0.tgz#5f2fa4233eda44cf7570526adfcf3c16937aef11"
