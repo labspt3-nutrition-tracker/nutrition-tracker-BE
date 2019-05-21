@@ -8,10 +8,10 @@ const foodCatResolver = require("./foodCategory");
 const foodEntryResolver = require("./foodEntry");
 
 module.exports = GMR.merge([
-  // userResolver,
-  exerciseResolver
-  // foodCatResolver,
-  // mealCatResolver,
-  // foodResolver,
-  // foodEntryResolver
+  userResolver,
+  exerciseResolver,
+  foodCatResolver,
+  mealCatResolver,
+  foodResolver,
+  foodEntryResolver
 ]);
