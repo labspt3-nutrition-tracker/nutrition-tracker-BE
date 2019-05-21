@@ -26,15 +26,15 @@ module.exports = {
   },
 
   FoodEntry: {
-    user: async (root, args, ctx) => {
+    user_id: async (root, args, ctx) => {
       const owner = await User.findById(root.user_id);
       return owner;
     },
-    food: async (root, args, ctx) => {
+    food_id: async (root, args, ctx) => {
       const loggedFood = await Food.findById(root.food_id);
       return loggedFood;
     },
-    mealCategory: async (root, args, ctx) => {
+    meal_category_id: async (root, args, ctx) => {
       const mealCat = await MealCategory.findById(root.meal_category_id);
       return mealCat;
     }

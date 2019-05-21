@@ -6,7 +6,6 @@ module.exports = {
   Query: {
     getExerciseEntries: async (root, args, ctx) => {
       const entries = await ExerciseEntry.getAll();
-
       return entries;
     },
 
@@ -21,7 +20,7 @@ module.exports = {
     },
   },
   ExerciseEntry: {
-    user: async (root,args,cxt,info) => {
+    exercise_entry_user_id: async (root,args,cxt,info) => {
       const user = await Users.findById(root.exercise_entry_user_id);
       return user;
     }
