@@ -43,15 +43,15 @@ module.exports = {
   Mutation: {
     addFoodEntry: async (root, args, ctx) => {
       const newFoodEntry = {
-        ...args.newFoodEntry
+        ...args.input
       };
       const addedEntry = await FoodEntry.add(newFoodEntry);
       return addedEntry;
     },
 
     updateFoodEntry: async (root, args, ctx) => {
-      const { id, data } = args;
-      const foodEntry = await FoodEntry.edit(id, data);
+      const { id, input } = args;
+      const foodEntry = await FoodEntry.edit(id, input);
       return foodEntry;
     },
 

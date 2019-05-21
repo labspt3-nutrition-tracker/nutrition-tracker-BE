@@ -11,33 +11,6 @@ const authenticated = next => (root, args, ctx, info) => {
   return next(root, args, ctx, info);
 };
 
-// Add in typeDefs.js
-// type Query {
-//   getUserBy(filter: String!): [User!]
-// }
-// type Mutation {
-//  addUser(input: UserInput!): User!
-//  updateUser(userId: ID!, input: UpdateUserInput!): User!
-// }
-// input UserInput {
-//   firstName: String!
-//   lastName: String!
-//   username: String!
-//   email: String!
-//   userType: String!
-//   calorieGoal: Int!
-//   weight: Int!
-// }
-// input UpdateUserInput {
-//   firstName: String
-//   lastName: String
-//   username: String
-//   email: String
-//   userType: String
-//   calorieGoal: Int
-//   weight: Int
-// }
-
 module.exports = {
   Query: {
     getCurrentUser: authenticated((root, args, ctx) => ctx.currentUser),
@@ -86,11 +59,11 @@ module.exports = {
       return newUSer;
     },
     deleteUser: async (root, args, ctx) => {
-      const count = await User.remove(args.userId);
+      const count = await User.remove(args.id);
       return count;
     },
     updateUser: async (root, args, ctx) => {
-      const user = await User.edit(args.userId, args.input);
+      const user = await User.edit(args.id, args.input);
       return user;
     }
   }

@@ -1,22 +1,7 @@
 //* Import MealCategory helper functions
 const MealCategory = require("../../models/mealCategoriesModel");
 const FoodEntry = require("../../models/foodEntriesModel");
-/*
-in typeDefs:
-//  type Mutation {
-//    addMealCategory(input: MealCategoryInput!): MealCategory!
-//    updateMealCategory(id: ID!, input: UpdateMealCategoryInput!): MealCategory!
-//    deleteMealCategory(id: ID!): Int!
-//  }
-//  type MealCategoryInput {
-    id: ID!
-    name: String!
-//  }
-//  type UpdateMealCategoryInput {
-    id: ID
-    name: String
-//  }
-*/
+
 module.exports = {
   Query: {
     getMealCategories: async (root, args, ctx) => {
