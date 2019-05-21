@@ -19,6 +19,7 @@ module.exports = gql`
     #//*User
     getCurrentUser: User
     getUsers: [User!]!
+    getUserBy(filter: String!): User!
     getUserById(userId: ID!): User
     getFoodEntriesByUserId(userId: ID!): FoodEntry!
     getExerciseEntriesByUserId(userId: ID!): ExerciseEntry!
@@ -34,32 +35,33 @@ module.exports = gql`
 
   type Mutation {
     #//* ExerciseEntry
-    addExerciseEntry(newEntry: ExerciseEntryInput!): ExerciseEntry!
-    updateExerciseEntry(id: ID!, changes: ExerciseEntryInput!): ExerciseEntry!
+    addExerciseEntry(input: ExerciseEntryInput!): ExerciseEntry!
+    updateExerciseEntry(id: ID!, input: ExerciseEntryInput!): ExerciseEntry!
     deleteExerciseEntry(id: ID!): Int!
 
     #//* Food
-    addFood(food: FoodInput!): Food!
-    updateFood(foodId: ID!, food: FoodInput!): Food!
-    deleteFood(foodId: ID!): Int!
+    addFood(input: FoodInput!): Food!
+    updateFood(id: ID!, input: FoodInput!): Food!
+    deleteFood(id: ID!): Int!
 
     #//*MealCategory
-    addMealCategory(newCategory: MealCategoryInput!): MealCategory!
-    updateMealCategory(id: ID!, changes: MealCategoryInput!): MealCategory!
+    addMealCategory(input: MealCategoryInput!): MealCategory!
+    updateMealCategory(id: ID!, input: MealCategoryInput!): MealCategory!
     deleteMealCategory(id: ID!): Int!
 
     #//*User
-    deleteUser(userId: ID!): Int!
-    updateUser(userId: ID!, user: UserInput!): User!
+    addUser(input: UserInput!): User!
+    deleteUser(id: ID!): Int!
+    updateUser(id: ID!, input: UserInput!): User!
 
     #//*FoodCategory
-    addFoodCategory(newFoodCategory: FoodCategoryInput!): FoodCategory!
-    updateFoodCategory(id: ID!, data: FoodCategoryInput!): FoodCategory!
+    addFoodCategory(input: FoodCategoryInput!): FoodCategory!
+    updateFoodCategory(id: ID!, input: FoodCategoryInput!): FoodCategory!
     deleteFoodCategory(id: ID!): Int!
 
     #//*FoodEntry
-    addFoodEntry(newFoodEntry: FoodEntryInput!): FoodEntry!
-    updateFoodEntry(id: ID!, data: FoodEntryInput!): FoodEntry!
+    addFoodEntry(input: FoodEntryInput!): FoodEntry!
+    updateFoodEntry(id: ID!, input: FoodEntryInput!): FoodEntry!
     deleteFoodentry(id: ID!): Int!
   }
 
@@ -78,19 +80,19 @@ module.exports = gql`
 
   type Food {
     id: ID!
-    name: String!
+    foodName: String!
     caloriesPerServ: Int!
-    category: FoodCategory!
-    FoodEntries: [FoodEntry!]!
+    food_category_id: FoodCategory!
+    foodEntries: [FoodEntry!]!
   }
 
   type FoodEntry {
     id: ID!
     date: String!
-    food: Food!
-    user: User!
+    food_id: Food!
+    user_id: User!
     servingQty: Int!
-    mealCategory: MealCategory!
+    meal_category_id: MealCategory!
   }
 
   type FoodCategory {
@@ -101,33 +103,33 @@ module.exports = gql`
 
   type MealCategory {
     id: ID!
-    name: String!
+    mealCategoryName: String!
     foodEntries: [FoodEntry!]!
   }
 
   type ExerciseEntry {
     id: ID!
-    date: String!
-    name: String!
+    exerciseEntryDate: String!
+    exerciseName: String!
     caloriesBurned: Int!
-    user: User!
+    exercise_entry_user_id: User!
   }
 
   input ExerciseEntryInput {
-    date: String!
-    name: String!
+    exerciseEntryDate: String!
+    exerciseName: String!
     caloriesBurned: Int!
-    user: ID!
+    exercise_entry_user_id: ID!
   }
 
   input FoodInput {
-    name: String!
+    foodName: String!
     caloriesPerServ: Int!
-    category: ID!
+    food_category_id: ID!
   }
 
   input MealCategoryInput {
-    name: String!
+    mealCategoryName: String!
   }
 
   input UserInput {

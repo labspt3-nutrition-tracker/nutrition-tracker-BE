@@ -26,15 +26,15 @@ module.exports = {
   },
 
   FoodEntry: {
-    user: async (root, args, ctx) => {
+    user_id: async (root, args, ctx) => {
       const owner = await User.findById(root.user_id);
       return owner;
     },
-    food: async (root, args, ctx) => {
+    food_id: async (root, args, ctx) => {
       const loggedFood = await Food.findById(root.food_id);
       return loggedFood;
     },
-    mealCategory: async (root, args, ctx) => {
+    meal_category_id: async (root, args, ctx) => {
       const mealCat = await MealCategory.findById(root.meal_category_id);
       return mealCat;
     }
@@ -43,15 +43,15 @@ module.exports = {
   Mutation: {
     addFoodEntry: async (root, args, ctx) => {
       const newFoodEntry = {
-        ...args.newFoodEntry
+        ...args.input
       };
       const addedEntry = await FoodEntry.add(newFoodEntry);
       return addedEntry;
     },
 
     updateFoodEntry: async (root, args, ctx) => {
-      const { id, data } = args;
-      const foodEntry = await FoodEntry.edit(id, data);
+      const { id, input } = args;
+      const foodEntry = await FoodEntry.edit(id, input);
       return foodEntry;
     },
 

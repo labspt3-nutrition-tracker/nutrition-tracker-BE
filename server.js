@@ -1,26 +1,18 @@
 const { ApolloServer } = require("apollo-server");
-const { merge } = require("lodash");
+// const { merge } = require("lodash");
 
 const typeDefs = require("./typeDefs");
 // const resolvers = require("./resolvers/index");
 // console.log("resolvers from index", resolvers);
+
 const { findOrCreateUser } = require("./controllers/userController");
 
 //* import resolvers
-const resolvers = require("./resolvers");
+const resolvers = require("./resolvers/index");
 
 const server = new ApolloServer({
   typeDefs,
-
-  resolvers: merge(
-    exerciseResolver,
-    foodResolver,
-    mealCatResolver,
-    userResolver,
-    foodCatResolver,
-    foodEntryResolver
-  ),
-
+  resolvers,
   context: async ({ req }) => {
     let authToken = null;
     let currentUser = null;
