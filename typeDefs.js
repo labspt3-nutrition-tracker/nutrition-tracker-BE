@@ -2,53 +2,67 @@ const { gql } = require("apollo-server");
 
 module.exports = gql`
   type Query {
-    # getExerciseEntries: [ExerciseEntry!]!
-    # getExerciseEntryBy(filter: String!): ExerciseEntry!
-    # getExerciseEntryById(id: ID!): ExerciseEntry!
+    #//*ExerciseEntry
+    getExerciseEntries: [ExerciseEntry!]!
+    getExerciseEntryBy(filter: String!): ExerciseEntry!
+    getExerciseEntryById(id: ID!): ExerciseEntry!
 
+    #//*Food
     getFoods: [Food!]!
     getFoodById(foodId: ID!): Food!
 
-    # getMealCategories: [MealCategory!]!
-    # getMealCategoryBy(filter: String!): MealCategory!
-    # getMealCategoryById(id: ID!): MealCategory!
+    #//*MealCategory
+    getMealCategories: [MealCategory!]!
+    getMealCategoryBy(filter: String!): MealCategory!
+    getMealCategoryById(id: ID!): MealCategory!
 
-    # getCurrentUser: User
-    # getUsers: [User!]!
-    # getUserById(userId: ID!): User
-    # getFoodEntriesByUserId(userId: ID!): FoodEntry!
-    # getExerciseEntriesByUserId(userId: ID!): ExerciseEntry!
+    #//*User
+    getCurrentUser: User
+    getUsers: [User!]!
+    getUserBy(filter: String!): User!
+    getUserById(userId: ID!): User
+    getFoodEntriesByUserId(userId: ID!): FoodEntry!
+    getExerciseEntriesByUserId(userId: ID!): ExerciseEntry!
 
-    # getFoodCategories: [FoodCategory!]!
-    # getFoodEntriesByFoodId(foodEntryId: ID!): FoodCategory!
+    #//*FoodCategory
+    getFoodCategories: [FoodCategory!]!
+    getFoodCategoryById(id: ID!): FoodCategory!
 
-    # getFoodEntries: [FoodEntry!]!
-    # getFoodEntriesById(id: ID!): FoodEntry!
+    #//* FoodEntry
+    getFoodEntries: [FoodEntry!]!
+    getFoodEntriesById(id: ID!): FoodEntry!
   }
 
   type Mutation {
-    # addExerciseEntry(input: ExerciseEntryInput!): ExerciseEntry!
-    # updateExerciseEntry(id: ID!, input: ExerciseEntryInput!): ExerciseEntry!
-    # deleteExerciseEntry(id: ID!): Int!
+    #//* ExerciseEntry
+    addExerciseEntry(newEntry: ExerciseEntryInput!): ExerciseEntry!
+    updateExerciseEntry(id: ID!, changes: ExerciseEntryInput!): ExerciseEntry!
+    deleteExerciseEntry(id: ID!): Int!
 
-    addFood(input: FoodInput!): Food!
-    updateFood(id: ID!, input: FoodInput!): Food!
-    deleteFood(id: ID!): Int!
+    #//* Food
+    addFood(food: FoodInput!): Food!
+    updateFood(foodId: ID!, food: FoodInput!): Food!
+    deleteFood(foodId: ID!): Int!
 
-    # addMealCategory(newCategory: MealCategory!): MealCategory!
-    # updateMealCategory(id: ID!, changes: MealCategory!): MealCategory!
-    # deleteMealCategory(id: ID!): Int!
+    #//*MealCategory
+    addMealCategory(newCategory: MealCategoryInput!): MealCategory!
+    updateMealCategory(id: ID!, changes: MealCategoryInput!): MealCategory!
+    deleteMealCategory(id: ID!): Int!
 
-    # deleteUser(userId: ID!): Int!
-    # updateUser(userId: ID!, user: User!): User!
+    #//*User
+    addUser(input: UserInput!): User!
+    deleteUser(userId: ID!): Int!
+    updateUser(userId: ID!, user: UserInput!): User!
 
-    # addFoodCategory(newFoodCategory: FoodCategory!): FoodCategory!
-    # updateFoodCategory(id: ID!, data: FoodCategory!): FoodCategory!
-    # deleteFoodCategory(id: ID!): Int!
+    #//*FoodCategory
+    addFoodCategory(newFoodCategory: FoodCategoryInput!): FoodCategory!
+    updateFoodCategory(id: ID!, data: FoodCategoryInput!): FoodCategory!
+    deleteFoodCategory(id: ID!): Int!
 
-    # addFoodEntry(newFoodEntry: FoodEntry!): FoodEntry!
-    # updateFoodEntry(id: ID!, data: FoodEntry!): FoodEntry!
-    # deleteFoodentry(id: ID!): Int!
+    #//*FoodEntry
+    addFoodEntry(newFoodEntry: FoodEntryInput!): FoodEntry!
+    updateFoodEntry(id: ID!, data: FoodEntryInput!): FoodEntry!
+    deleteFoodentry(id: ID!): Int!
   }
 
   type User {
@@ -75,10 +89,10 @@ module.exports = gql`
   type FoodEntry {
     id: ID!
     date: String!
-    food: Food!
-    user: User!
+    food_id: Food!
+    user_id: User!
     servingQty: Int!
-    mealCategory: MealCategory!
+    meal_category_id: MealCategory!
   }
 
   type FoodCategory {
@@ -89,7 +103,7 @@ module.exports = gql`
 
   type MealCategory {
     id: ID!
-    name: String!
+    mealCategoryName: String!
     foodEntries: [FoodEntry!]!
   }
 
@@ -98,7 +112,7 @@ module.exports = gql`
     exerciseEntryDate: String!
     exerciseName: String!
     caloriesBurned: Int!
-    user: User!
+    exercise_entry_user_id: User!
   }
 
   input ExerciseEntryInput {
@@ -108,9 +122,35 @@ module.exports = gql`
     exercise_entry_user_id: ID!
   }
 
-  input FoodInput{
-    foodName: String!
+  input FoodInput {
+    name: String!
     caloriesPerServ: Int!
-    food_category_id: ID!
+    category: ID!
+  }
+
+  input MealCategoryInput {
+    name: String!
+  }
+
+  input UserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    userType: String!
+    calorieGoal: Int!
+    weight: Int
+  }
+
+  input FoodCategoryInput {
+    foodCategoryName: String!
+  }
+
+  input FoodEntryInput {
+    date: String!
+    food_id: ID!
+    user_id: ID!
+    servingQty: Int!
+    meal_category_id: ID!
   }
 `;

@@ -5,7 +5,7 @@ const userResolver = require("./users/usersResolvers");
 const foodCatResolver = require("./foodCategory");
 const foodEntryResolver = require("./foodEntry");
 
-module.exports = {
+const resolvers = {
   exerciseResolver,
   foodResolver,
   mealCatResolver,
@@ -13,3 +13,5 @@ module.exports = {
   foodCatResolver,
   foodEntryResolver
 };
+
+module.exports = resolvers;
