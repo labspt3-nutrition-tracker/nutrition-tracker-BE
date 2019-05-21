@@ -10,10 +10,6 @@ module.exports = {
 };
 
 function getAll() {
-  console.log("from getAll");
-  db("users").then(res => {
-    console.log(res);
-  });
   return db("exerciseEntries");
 }
 

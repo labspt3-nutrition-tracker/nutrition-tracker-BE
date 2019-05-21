@@ -1,7 +1,9 @@
 const { ApolloServer } = require("apollo-server");
+const { merge } = require("lodash");
 
 const typeDefs = require("./typeDefs");
 // const resolvers = require("./resolvers/index");
+// console.log("resolvers from index", resolvers);
 const { findOrCreateUser } = require("./controllers/userController");
 
 //* import resolvers
@@ -9,7 +11,16 @@ const resolvers = require("./resolvers");
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers,
+
+  resolvers: merge(
+    exerciseResolver,
+    foodResolver,
+    mealCatResolver,
+    userResolver,
+    foodCatResolver,
+    foodEntryResolver
+  ),
+
   context: async ({ req }) => {
     let authToken = null;
     let currentUser = null;
