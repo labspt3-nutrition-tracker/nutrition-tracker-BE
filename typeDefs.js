@@ -65,6 +65,8 @@ module.exports = gql`
     deleteFoodentry(id: ID!): Int!
   }
 
+  scalar Date
+
   type User {
     id: ID!
     firstName: String!
@@ -88,7 +90,7 @@ module.exports = gql`
 
   type FoodEntry {
     id: ID!
-    date: String!
+    date: Date!
     food_id: Food!
     user_id: User!
     servingQty: Int!
@@ -109,14 +111,14 @@ module.exports = gql`
 
   type ExerciseEntry {
     id: ID!
-    exerciseEntryDate: String!
+    exerciseEntryDate: Date!
     exerciseName: String!
     caloriesBurned: Int!
     exercise_entry_user_id: User!
   }
 
   input ExerciseEntryInput {
-    exerciseEntryDate: String!
+    exerciseEntryDate: Date!
     exerciseName: String!
     caloriesBurned: Int!
     exercise_entry_user_id: ID!
@@ -147,7 +149,7 @@ module.exports = gql`
   }
 
   input FoodEntryInput {
-    date: String!
+    date: Date!
     food_id: ID!
     user_id: ID!
     servingQty: Int!

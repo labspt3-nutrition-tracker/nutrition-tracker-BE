@@ -1,9 +1,6 @@
 const { ApolloServer } = require("apollo-server");
-// const { merge } = require("lodash");
 
 const typeDefs = require("./typeDefs");
-// const resolvers = require("./resolvers/index");
-// console.log("resolvers from index", resolvers);
 
 const { findOrCreateUser } = require("./controllers/userController");
 
