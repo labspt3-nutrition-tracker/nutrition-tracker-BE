@@ -10,7 +10,7 @@ module.exports = {
     },
 
     getMealCategoryBy: async (root, args, ctx) => {
-      const category = await MealCategory.findBy(args.filter);
+      const category = await MealCategory.findBy({ [args.param]: args.value });
       return category;
     },
 

@@ -26,8 +26,7 @@ module.exports = {
     },
 
     getUserBy: async (root, args, ctx) => {
-      const user = await User.findBy(args.filter);
-      console.log({ user });
+      const user = await User.findBy({ [args.param]: args.value });
       return user;
     },
 
