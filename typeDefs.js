@@ -21,8 +21,8 @@ module.exports = gql`
     getUsers: [User!]!
     getUserBy(filter: String!): User!
     getUserById(userId: ID!): User
-    getFoodEntriesByUserId(userId: ID!): FoodEntry!
-    getExerciseEntriesByUserId(userId: ID!): ExerciseEntry!
+    getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
+    getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
 
     #//*FoodCategory
     getFoodCategories: [FoodCategory!]!

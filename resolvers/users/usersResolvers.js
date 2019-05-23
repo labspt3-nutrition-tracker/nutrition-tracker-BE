@@ -37,7 +37,7 @@ module.exports = {
     },
 
     getExerciseEntriesByUserId: async (root, args, ctx) => {
-      const entries = await ExerciseEntry.findBy({ user_id: args.userId });
+      const entries = await ExerciseEntry.findBy({ exercise_entry_user_id: args.userId });
       return entries;
     }
   },
