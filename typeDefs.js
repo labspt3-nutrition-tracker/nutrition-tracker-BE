@@ -13,13 +13,13 @@ module.exports = gql`
 
     #//*MealCategory
     getMealCategories: [MealCategory!]!
-    getMealCategoryBy(param: String!, value: String!): [MealCategory!]!
+    getMealCategoryBy(param: String!, value: String!): MealCategory!
     getMealCategoryById(id: ID!): MealCategory!
 
     #//*User
     getCurrentUser: User
     getUsers: [User!]!
-    getUserBy(param: String!, value: String!): [User!]!
+    getUserBy(param: String!, value: String!): User!
     getUserById(userId: ID!): User!
     getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!

@@ -27,7 +27,7 @@ module.exports = {
 
     getUserBy: async (root, args, ctx) => {
       const user = await User.findBy({ [args.param]: args.value });
-      return user;
+      return user[0];
     },
 
     getFoodEntriesByUserId: async (root, args, ctx) => {
