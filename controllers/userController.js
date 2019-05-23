@@ -10,7 +10,8 @@ exports.findOrCreateUser = async token => {
   //check if user exists in database
   const user = await checkIfUserExists(googleUser.email);
   // if user exists, return info, else create user in database
-  return user ? user : createNewUser(googleUser);
+  // return user ? user : createNewUser(googleUser);
+  return user ? user : null;
 };
 
 const verifyAuthToken = async token => {
@@ -27,8 +28,8 @@ const verifyAuthToken = async token => {
 
 const checkIfUserExists = async email => await User.findBy(email);
 
-const createNewUser = googleUser => {
-  const { given_name, family_name, email } = googleUser;
-  const user = { firstName: given_name, lastName: family_name, email };
-  return User.add(user);
-};
+// const createNewUser = googleUser => {
+//   const { given_name, family_name, email } = googleUser;
+//   const user = { firstName: given_name, lastName: family_name, email };
+//   return User.add(user);
+// };
