@@ -1,6 +1,6 @@
 //* import ExerciseEntry helper functions
 const ExerciseEntry = require("../../models/exerciseEntriesModel");
-const Users = require('../../models/usersModel');
+const Users = require("../../models/usersModel");
 
 module.exports = {
   Query: {
@@ -10,17 +10,17 @@ module.exports = {
     },
 
     getExerciseEntryBy: async (root, args, ctx) => {
-      const entry = await ExerciseEntry.findBy(args.filter);
+      const entry = await ExerciseEntry.findBy({ [args.param]: args.value });
       return entry;
     },
 
     getExerciseEntryById: async (root, args, ctx) => {
       const entry = await ExerciseEntry.findById(args.id);
       return entry;
-    },
+    }
   },
   ExerciseEntry: {
-    exercise_entry_user_id: async (root,args,cxt,info) => {
+    exercise_entry_user_id: async (root, args, cxt, info) => {
       const user = await Users.findById(root.exercise_entry_user_id);
       return user;
     }
