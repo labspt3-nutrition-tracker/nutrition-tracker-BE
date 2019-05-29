@@ -19,8 +19,8 @@ module.exports = gql`
     #//*User
     getCurrentUser: User
     getUsers: [User!]!
-    getUserBy(param: String!, value: String!): User!
-    getUserById(userId: ID!): User!
+    getUserBy(param: String!, value: String!): User
+    getUserById(userId: ID!): User
     getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
 
