@@ -19,8 +19,8 @@ module.exports = gql`
     #//*User
     getCurrentUser: User
     getUsers: [User!]!
-    getUserBy(param: String!, value: String!): User!
-    getUserById(userId: ID!): User!
+    getUserBy(param: String!, value: String!): User
+    getUserById(userId: ID!): User
     getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
 
@@ -84,7 +84,9 @@ module.exports = gql`
     id: ID!
     foodName: String!
     caloriesPerServ: Int!
-    food_category_id: FoodCategory!
+    fats: Float!
+    carbs: Float!
+    proteins: Float!
     foodEntries: [FoodEntry!]!
   }
 
@@ -127,7 +129,9 @@ module.exports = gql`
   input FoodInput {
     foodName: String!
     caloriesPerServ: Int!
-    food_category_id: ID!
+    fats: Float!
+    carbs: Float!
+    proteins: Float!
   }
 
   input MealCategoryInput {
