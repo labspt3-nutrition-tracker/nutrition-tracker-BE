@@ -84,7 +84,9 @@ module.exports = gql`
     id: ID!
     foodName: String!
     caloriesPerServ: Int!
-    food_category_id: FoodCategory!
+    fats: Float!
+    carbs: Float!
+    proteins: Float!
     foodEntries: [FoodEntry!]!
   }
 
@@ -127,7 +129,9 @@ module.exports = gql`
   input FoodInput {
     foodName: String!
     caloriesPerServ: Int!
-    food_category_id: ID!
+    fats: Float!
+    carbs: Float!
+    proteins: Float!
   }
 
   input MealCategoryInput {
