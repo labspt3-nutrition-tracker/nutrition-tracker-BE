@@ -119,6 +119,14 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
+  type Billing {
+    id: ID!
+    user_id: User!
+    email: User!
+    price: Int!
+    date: Date!
+  }
+
   input ExerciseEntryInput {
     exerciseEntryDate: Date!
     exerciseName: String!
