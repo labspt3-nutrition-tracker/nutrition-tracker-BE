@@ -1,5 +1,6 @@
 const GMR = require("graphql-merge-resolvers");
 
+const stripeResolver = require("./stripe/stripeResolvers");
 const exerciseResolver = require("./exerciseEntry/exerciseEntry_resolvers");
 const foodResolver = require("./foods/foodsResolvers");
 const mealCatResolver = require("./mealCategory/mealCategory_resolvers");
@@ -15,5 +16,6 @@ module.exports = GMR.merge([
   mealCatResolver,
   foodResolver,
   foodEntryResolver,
-  dateResolver
+  dateResolver,
+  stripeResolver
 ]);

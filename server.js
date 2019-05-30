@@ -3,7 +3,7 @@ require("dotenv/config")
 const typeDefs = require("./typeDefs");
 
 const { findOrCreateUser } = require("./controllers/userController");
-const { stripe } = require("./stripe"); 
+
 //* import resolvers
 const resolvers = require("./resolvers/index");
 
