@@ -1,5 +1,5 @@
 const { ApolloServer } = require("apollo-server");
-
+require("dotenv/config")
 const typeDefs = require("./typeDefs");
 
 const { findOrCreateUser } = require("./controllers/userController");
