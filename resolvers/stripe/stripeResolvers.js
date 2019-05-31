@@ -7,7 +7,8 @@ module.exports = {
             const {source, email} = args
 
             let user = await User.findBy({"email": email})
-            const customer = stripe.customers.create({
+            console.log(user)
+            const customer = await stripe.customers.create({
                 email: user.email,
                 source,
                 plan: process.env.PLAN
@@ -19,16 +20,21 @@ module.exports = {
                 userType: "Super User"
             }
 
+
             const billingInfo = {
+                date: new Date,
                 user_id: user.id,
                 stripeId: user.stripe_id,
-                amount_paid: source.price
+                amount_paid: 700
             }
 
-            const newUser = await User.edit(user.id, user);
 
-            console.log(source)
+            await Billing.add(billingInfo)
 
+            await User.edit(user.id, user);
+
+            const test = await Billing.getAll()
+            console.log(test)
             return user;
         }
     }

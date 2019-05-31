@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
     return knex.schema.table("users", tbl => {
-        tbl.integer("stripe_id");
+        tbl.string("stripe_id");
     });
 };
 

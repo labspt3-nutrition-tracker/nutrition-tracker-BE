@@ -81,7 +81,7 @@ module.exports = gql`
     weight: Int
     foodEntries: [FoodEntry!]!
     exerciseEntries: [ExerciseEntry!]!
-    stripeId: Int
+    stripe_id: String
   }
 
   type Food {
