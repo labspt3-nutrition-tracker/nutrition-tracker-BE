@@ -30,7 +30,6 @@ module.exports = gql`
     getFoodCategories: [FoodCategory!]!
     getFoodCategoryById(id: ID!): FoodCategory!
 
-
     #//* FoodEntry
     getFoodEntries: [FoodEntry!]!
     getFoodEntriesById(id: ID!): FoodEntry!
@@ -135,19 +134,18 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
-<<<<<<< HEAD
   type WeightEntry {
     id: ID!
     date: Date!
     weight: Float!
     user_id: User!
-=======
+  }
+
   type Billing {
     id: ID!
     date: Date!
     user_id: User!
     amount_paid: Int!
->>>>>>> 6a4a25f96a4f346be0bab9d6062321faec820776
   }
 
   input ExerciseEntryInput {
