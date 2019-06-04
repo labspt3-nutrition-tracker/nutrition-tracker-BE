@@ -10,6 +10,7 @@ module.exports = gql`
     #//*Food
     getFoods: [Food!]!
     getFoodById(foodId: ID!): Food!
+    getFoodBy(param: String!, value: String!): Food!
 
     #//*MealCategory
     getMealCategories: [MealCategory!]!
@@ -28,6 +29,7 @@ module.exports = gql`
     #//*FoodCategory
     getFoodCategories: [FoodCategory!]!
     getFoodCategoryById(id: ID!): FoodCategory!
+
 
     #//* FoodEntry
     getFoodEntries: [FoodEntry!]!
@@ -100,6 +102,7 @@ module.exports = gql`
     fats: Float!
     carbs: Float!
     proteins: Float!
+    edamam_id: String
     foodEntries: [FoodEntry!]!
   }
 
@@ -160,6 +163,7 @@ module.exports = gql`
     fats: Float!
     carbs: Float!
     proteins: Float!
+    edamam_id: String
   }
 
   input MealCategoryInput {

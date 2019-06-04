@@ -11,6 +11,10 @@ module.exports = {
     getFoodById: async (root, args, ctx) => {
       const food = await Foods.findById(args.foodId);
       return food;
+    },
+    getFoodBy: async (root, args, ctx) => {
+      const food = await Foods.findBy({ [args.param]: args.value});
+      return food;
     }
   },
 
