@@ -72,6 +72,9 @@ module.exports = gql`
     addWeightEntry(input: WeightEntryInput!): WeightEntry!
     updateWeightEntry(id: ID!, input: WeightEntryInput!): WeightEntry!
     deleteWeightEntry(id: ID!): Int!
+
+    #//*StripeSubscription
+    createSubscription(source: String!, email: String!): User!
   }
 
   scalar Date
@@ -87,6 +90,7 @@ module.exports = gql`
     weight: Int
     foodEntries: [FoodEntry!]!
     exerciseEntries: [ExerciseEntry!]!
+    stripeId: Int
   }
 
   type Food {
@@ -128,11 +132,19 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
+<<<<<<< HEAD
   type WeightEntry {
     id: ID!
     date: Date!
     weight: Float!
     user_id: User!
+=======
+  type Billing {
+    id: ID!
+    date: Date!
+    user_id: User!
+    amount_paid: Int!
+>>>>>>> 6a4a25f96a4f346be0bab9d6062321faec820776
   }
 
   input ExerciseEntryInput {
