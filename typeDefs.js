@@ -21,8 +21,9 @@ module.exports = gql`
     getUsers: [User!]!
     getUserBy(param: String!, value: String!): User
     getUserById(userId: ID!): User
-    getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
+    getFoodEntriesByUserId(userId: ID!): [FoodEntry]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
+    getWeightEntriesByUserId(userId: ID!): [WeightEntry]
 
     #//*FoodCategory
     getFoodCategories: [FoodCategory!]!
@@ -31,6 +32,9 @@ module.exports = gql`
     #//* FoodEntry
     getFoodEntries: [FoodEntry!]!
     getFoodEntriesById(id: ID!): FoodEntry!
+
+    #//* Weightentry
+    getWeightEntries: [WeightEntry]
   }
 
   type Mutation {
@@ -62,7 +66,12 @@ module.exports = gql`
     #//*FoodEntry
     addFoodEntry(input: FoodEntryInput!): FoodEntry!
     updateFoodEntry(id: ID!, input: FoodEntryInput!): FoodEntry!
-    deleteFoodentry(id: ID!): Int!
+    deleteFoodEntry(id: ID!): Int!
+
+    # //*WeightEntry
+    addWeightEntry(input: WeightEntryInput!): WeightEntry!
+    updateWeightEntry(id: ID!, input: WeightEntryInput!): WeightEntry!
+    deleteWeightEntry(id: ID!): Int!
   }
 
   scalar Date
@@ -119,6 +128,13 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
+  type WeightEntry {
+    id: ID!
+    date: Date!
+    weight: Float!
+    user_id: User!
+  }
+
   input ExerciseEntryInput {
     exerciseEntryDate: Date!
     exerciseName: String!
@@ -158,5 +174,11 @@ module.exports = gql`
     user_id: ID!
     servingQty: Int!
     meal_category_id: ID!
+  }
+
+  input WeightEntryInput {
+    date: Date!
+    weight: Float!
+    user_id: ID!
   }
 `;
