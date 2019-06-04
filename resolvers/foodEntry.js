@@ -55,7 +55,7 @@ module.exports = {
       return foodEntry;
     },
 
-    deleteFoodentry: async (root, { id }, ctx) => {
+    deleteFoodEntry: async (root, { id }, ctx) => {
       const deleteEntry = await FoodEntry.remove(id);
       return deleteEntry;
     }

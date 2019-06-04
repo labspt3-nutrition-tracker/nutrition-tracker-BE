@@ -22,8 +22,9 @@ module.exports = gql`
     getUsers: [User!]!
     getUserBy(param: String!, value: String!): User
     getUserById(userId: ID!): User
-    getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
+    getFoodEntriesByUserId(userId: ID!): [FoodEntry]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
+    getWeightEntriesByUserId(userId: ID!): [WeightEntry]
 
     #//*FoodCategory
     getFoodCategories: [FoodCategory!]!
@@ -33,6 +34,9 @@ module.exports = gql`
     #//* FoodEntry
     getFoodEntries: [FoodEntry!]!
     getFoodEntriesById(id: ID!): FoodEntry!
+
+    #//* Weightentry
+    getWeightEntries: [WeightEntry]
   }
 
   type Mutation {
@@ -64,7 +68,12 @@ module.exports = gql`
     #//*FoodEntry
     addFoodEntry(input: FoodEntryInput!): FoodEntry!
     updateFoodEntry(id: ID!, input: FoodEntryInput!): FoodEntry!
-    deleteFoodentry(id: ID!): Int!
+    deleteFoodEntry(id: ID!): Int!
+
+    # //*WeightEntry
+    addWeightEntry(input: WeightEntryInput!): WeightEntry!
+    updateWeightEntry(id: ID!, input: WeightEntryInput!): WeightEntry!
+    deleteWeightEntry(id: ID!): Int!
 
     #//*StripeSubscription
     createSubscription(source: String!, email: String!): User!
@@ -126,11 +135,19 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
+<<<<<<< HEAD
+  type WeightEntry {
+    id: ID!
+    date: Date!
+    weight: Float!
+    user_id: User!
+=======
   type Billing {
     id: ID!
     date: Date!
     user_id: User!
     amount_paid: Int!
+>>>>>>> 6a4a25f96a4f346be0bab9d6062321faec820776
   }
 
   input ExerciseEntryInput {
@@ -173,5 +190,11 @@ module.exports = gql`
     user_id: ID!
     servingQty: Int!
     meal_category_id: ID!
+  }
+
+  input WeightEntryInput {
+    date: Date!
+    weight: Float!
+    user_id: ID!
   }
 `;
