@@ -4,6 +4,7 @@ module.exports = {
   getAll,
   findBy,
   findById,
+  findAllById,
   add,
   remove
 };
@@ -20,6 +21,11 @@ function findById(id) {
   return db("billing")
     .where({ id })
     .first();
+}
+
+function findAllById(id) {
+  return db("billing")
+    .where({ id })
 }
 
 async function add(billingInfo) {

@@ -31,6 +31,9 @@ module.exports = gql`
     #//* FoodEntry
     getFoodEntries: [FoodEntry!]!
     getFoodEntriesById(id: ID!): FoodEntry!
+
+    #//* Billing
+    getBillingHistory(id: ID!): Billing!
   }
 
   type Mutation {
@@ -64,7 +67,7 @@ module.exports = gql`
     updateFoodEntry(id: ID!, input: FoodEntryInput!): FoodEntry!
     deleteFoodentry(id: ID!): Int!
 
-    #//*StripeSubscription
+    #//*Billing
     createSubscription(source: String!, email: String!): User!
   }
 
