@@ -10,6 +10,7 @@ module.exports = gql`
     #//*Food
     getFoods: [Food!]!
     getFoodById(foodId: ID!): Food!
+    getFoodBy(param: String!, value: String!): Food!
 
     #//*MealCategory
     getMealCategories: [MealCategory!]!
@@ -21,8 +22,9 @@ module.exports = gql`
     getUsers: [User!]!
     getUserBy(param: String!, value: String!): User
     getUserById(userId: ID!): User
-    getFoodEntriesByUserId(userId: ID!): [FoodEntry!]!
+    getFoodEntriesByUserId(userId: ID!): [FoodEntry]!
     getExerciseEntriesByUserId(userId: ID!): [ExerciseEntry]!
+    getWeightEntriesByUserId(userId: ID!): [WeightEntry]
 
     #//*FoodCategory
     getFoodCategories: [FoodCategory!]!
@@ -34,6 +36,9 @@ module.exports = gql`
 
     #//* Billing
     getBillingHistory(id: ID!): [Billing!]
+
+    #//* Weightentry
+    getWeightEntries: [WeightEntry]
   }
 
   type Mutation {
@@ -65,7 +70,12 @@ module.exports = gql`
     #//*FoodEntry
     addFoodEntry(input: FoodEntryInput!): FoodEntry!
     updateFoodEntry(id: ID!, input: FoodEntryInput!): FoodEntry!
-    deleteFoodentry(id: ID!): Int!
+    deleteFoodEntry(id: ID!): Int!
+
+    # //*WeightEntry
+    addWeightEntry(input: WeightEntryInput!): WeightEntry!
+    updateWeightEntry(id: ID!, input: WeightEntryInput!): WeightEntry!
+    deleteWeightEntry(id: ID!): Int!
 
     #//*Billing
     createSubscription(source: String!, email: String!): User!
@@ -94,6 +104,7 @@ module.exports = gql`
     fats: Float!
     carbs: Float!
     proteins: Float!
+    edamam_id: String
     foodEntries: [FoodEntry!]!
   }
 
@@ -126,6 +137,13 @@ module.exports = gql`
     exercise_entry_user_id: User!
   }
 
+  type WeightEntry {
+    id: ID!
+    date: Date!
+    weight: Float!
+    user_id: User!
+  }
+
   type Billing {
     id: ID!
     date: Date!
@@ -146,6 +164,7 @@ module.exports = gql`
     fats: Float!
     carbs: Float!
     proteins: Float!
+    edamam_id: String
   }
 
   input MealCategoryInput {
@@ -172,5 +191,11 @@ module.exports = gql`
     user_id: ID!
     servingQty: Int!
     meal_category_id: ID!
+  }
+
+  input WeightEntryInput {
+    date: Date!
+    weight: Float!
+    user_id: ID!
   }
 `;

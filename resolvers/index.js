@@ -8,6 +8,7 @@ const userResolver = require("./users/usersResolvers");
 const foodCatResolver = require("./foodCategory");
 const foodEntryResolver = require("./foodEntry");
 const dateResolver = require("./dateResolvers");
+const weightEntryResolver = require("./weightEntry");
 
 module.exports = GMR.merge([
   userResolver,
@@ -17,5 +18,6 @@ module.exports = GMR.merge([
   foodResolver,
   foodEntryResolver,
   dateResolver,
+  weightEntryResolver,
   stripeResolver
 ]);
