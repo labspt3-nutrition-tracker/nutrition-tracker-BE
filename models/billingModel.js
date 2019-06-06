@@ -23,9 +23,9 @@ function findById(id) {
     .first();
 }
 
-function findAllById(id) {
+function findAllById(user_id) {
   return db("billing")
-    .where({ id })
+    .where({ user_id })
 }
 
 async function add(billingInfo) {
@@ -36,6 +36,6 @@ async function add(billingInfo) {
 
 function remove(id) {
   return db("billing")
-    .where("id", id)
+    .where("user_id", id)
     .del();
 }

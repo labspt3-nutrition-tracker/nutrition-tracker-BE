@@ -33,7 +33,7 @@ module.exports = gql`
     getFoodEntriesById(id: ID!): FoodEntry!
 
     #//* Billing
-    getBillingHistory(id: ID!): Billing!
+    getBillingHistory(id: ID!): [Billing!]
   }
 
   type Mutation {
@@ -130,7 +130,7 @@ module.exports = gql`
     id: ID!
     date: Date!
     user_id: User!
-    amount_paid: Int!
+    amount_paid: Int
   }
 
   input ExerciseEntryInput {
