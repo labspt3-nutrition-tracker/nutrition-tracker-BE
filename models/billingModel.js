@@ -4,6 +4,7 @@ module.exports = {
   getAll,
   findBy,
   findById,
+  findAllById,
   add,
   remove
 };
@@ -22,6 +23,11 @@ function findById(id) {
     .first();
 }
 
+function findAllById(user_id) {
+  return db("billing")
+    .where({ user_id })
+}
+
 async function add(billingInfo) {
   const [id] = await db("billing").insert(billingInfo, "id");
 
@@ -30,6 +36,6 @@ async function add(billingInfo) {
 
 function remove(id) {
   return db("billing")
-    .where("id", id)
+    .where("user_id", id)
     .del();
 }
