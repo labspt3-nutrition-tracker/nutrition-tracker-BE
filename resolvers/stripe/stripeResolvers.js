@@ -9,13 +9,25 @@ module.exports = {
         getBillingHistory: async (root, args, ctx) => {
             const { id } = args;
 
+            console.log("history", id)
             const billingInfo = await Billing.findAllById(id)
 
 
-            console.log(billingInfo)
+            console.log("billing history", billingInfo)
+
+            return billingInfo;
+        },
+
+        getRecentBilling: async (root, args, ctx) => {
+            const { id } = args;
+            console.log("recent", id)
+            const billingInfo = await Billing.findLastById(id)
+
+            console.log("recent billing", billingInfo)
 
             return billingInfo;
         }
+
     },
     Mutation: {
         createSubscription: async (root, args, ctx) => {

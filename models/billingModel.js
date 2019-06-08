@@ -5,6 +5,7 @@ module.exports = {
   findBy,
   findById,
   findAllById,
+  findLastById,
   add,
   remove
 };
@@ -26,6 +27,13 @@ function findById(id) {
 function findAllById(user_id) {
   return db("billing")
     .where({ user_id })
+}
+
+function findLastById(user_id){
+  return db("billing")
+    .where({ user_id })
+    .orderBy('id', 'desc')
+    .first()
 }
 
 async function add(billingInfo) {
