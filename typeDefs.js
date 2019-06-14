@@ -189,7 +189,7 @@ module.exports = gql`
 
   input FoodEntryInput {
     date: Date!
-    food_id: ID!
+    food_id: Food!
     user_id: ID!
     servingQty: Int!
     meal_category_id: ID!
