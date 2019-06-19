@@ -1,5 +1,5 @@
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable("coach", tbl => {
+  return knex.schema.createTable("coaches", tbl => {
     tbl
       .integer("coach")
       .unsigned()
@@ -16,5 +16,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists("coach");
+  return knex.schema.dropTableIfExists("coaches");
 };
