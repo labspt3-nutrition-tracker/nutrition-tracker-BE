@@ -41,6 +41,9 @@ module.exports = gql`
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
+
+    #//* Messages
+    getMessagesBy(param: String!, value: String!): [Message]
   }
 
   type Mutation {
@@ -81,6 +84,10 @@ module.exports = gql`
 
     #//*Billing
     createSubscription(source: String!, email: String!): User!
+
+    #//*Messages
+    addMessage(input: MessageInput!): Message!
+    deleteMessage(id: ID!): Int!
   }
 
   scalar Date
@@ -153,6 +160,16 @@ module.exports = gql`
     amount_paid: Int
   }
 
+  type Message {
+    id: ID!
+    created_at: Date!
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: User!
+    recipient: User!
+  }
+
   input ExerciseEntryInput {
     exerciseEntryDate: Date!
     exerciseName: String!
@@ -199,5 +216,13 @@ module.exports = gql`
     date: Date!
     weight: Float!
     user_id: ID!
+  }
+
+  input MessageInput {
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: ID!
+    recipient: ID!
   }
 `;
