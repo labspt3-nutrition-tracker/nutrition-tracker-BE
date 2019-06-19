@@ -36,6 +36,9 @@ module.exports = gql`
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
+
+    #//* Messages
+    getMessagesBy(param: String!, value: String!): [Message]
   }
 
   type Mutation {
@@ -146,6 +149,16 @@ module.exports = gql`
     date: Date!
     user_id: User!
     amount_paid: Int!
+  }
+
+  type Message {
+    id: ID!
+    created_at: Date!
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: User!
+    recipient: User!
   }
 
   input ExerciseEntryInput {
