@@ -9,8 +9,8 @@ function findBy(filter) {
 }
 
 async function add(coach_id, trainer_id) {
-  const [id] = await db("coaches").insert({coach: coach_id, trainee: trainer_id});
-  return findBy({coach: coach_id, trainee: trainer_id});
+  await db("coaches").insert({coach: coach_id, trainee: trainer_id});
+  .returning("coach", "trainee");
 }
 
 function remove(coach_id, trainer_id) {

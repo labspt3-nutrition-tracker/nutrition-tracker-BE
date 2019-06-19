@@ -41,6 +41,10 @@ module.exports = gql`
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
+
+    #//* Coaches
+    getTrainees: [User!]!
+    getCoaches: [Users!]!
   }
 
   type Mutation {
@@ -81,6 +85,10 @@ module.exports = gql`
 
     #//*Billing
     createSubscription(source: String!, email: String!): User!
+
+    #//*Coaches
+    addTrainees(input: CoachInput!): Users!
+    deleteTrainees(input: CoachInput!): Int!
   }
 
   scalar Date
@@ -97,6 +105,7 @@ module.exports = gql`
     foodEntries: [FoodEntry!]!
     exerciseEntries: [ExerciseEntry!]!
     stripe_id: String
+    trainees: [Coaches!]!
   }
 
   type Food {
@@ -153,6 +162,11 @@ module.exports = gql`
     amount_paid: Int
   }
 
+  type Coaches {
+    coach: User!
+    trainee: User!
+  }
+
   input ExerciseEntryInput {
     exerciseEntryDate: Date!
     exerciseName: String!
@@ -199,5 +213,10 @@ module.exports = gql`
     date: Date!
     weight: Float!
     user_id: ID!
+  }
+
+  input CoachInput {
+    coach_id: ID!
+    trainee_id: ID!
   }
 `;
