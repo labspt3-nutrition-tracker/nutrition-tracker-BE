@@ -83,7 +83,7 @@ module.exports = gql`
     deleteWeightEntry(id: ID!): Int!
 
     #//*Billing
-    createSubscription(source: String!, email: String!): User!
+    createSubscription(source: String!, email: String!, amount: Int!): User!
 
     #//*Messages
     addMessage(input: MessageInput!): Message!
