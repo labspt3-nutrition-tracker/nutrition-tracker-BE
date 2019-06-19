@@ -17,5 +17,19 @@ module.exports = {
       const recipient = await User.findById(root.recipient);
       return recipient;
     }
+  },
+  Mutation: {
+    addMessage: async (root, args, ctx) => {
+      const newMessage = {
+        ...args.input
+      };
+      const addedMessage = await Message.add(newMessage);
+      console.log({addedMessage})
+      return addedMessage;
+    },
+    deleteMessage: async (root, { id }, ctx) => {
+      const deleteMessage = await Message.remove(id);
+      return deleteMessage;
+    }
   }
 };

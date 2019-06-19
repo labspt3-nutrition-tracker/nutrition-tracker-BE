@@ -84,6 +84,10 @@ module.exports = gql`
 
     #//*Billing
     createSubscription(source: String!, email: String!): User!
+
+    #//*Messages
+    addMessage(input: MessageInput!): Message!
+    deleteMessage(id: ID!): Int!
   }
 
   scalar Date
@@ -212,5 +216,13 @@ module.exports = gql`
     date: Date!
     weight: Float!
     user_id: ID!
+  }
+
+  input MessageInput {
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: ID!
+    recipient: ID!
   }
 `;
