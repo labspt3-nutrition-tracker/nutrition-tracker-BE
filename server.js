@@ -1,8 +1,8 @@
 const { ApolloServer } = require("apollo-server");
-require("dotenv/config")
+require("dotenv/config");
 const typeDefs = require("./typeDefs");
 
-const { findOrCreateUser } = require("./controllers/userController");
+const { authAndFindUser } = require("./controllers/userController");
 
 //* import resolvers
 const resolvers = require("./resolvers/index");
@@ -18,8 +18,8 @@ const server = new ApolloServer({
     try {
       authToken = req.headers.authorization;
       if (authToken) {
-        // find or create user
-        currentUser = await findOrCreateUser(authToken);
+        // Authenticate and find user
+        currentUser = await authAndFindUser(authToken);
       }
     } catch (err) {
       console.error(`Unable to authenticate user with token ${authToken}`);
