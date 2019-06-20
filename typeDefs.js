@@ -42,6 +42,10 @@ module.exports = gql`
     #//* Weightentry
     getWeightEntries: [WeightEntry]
 
+    #//* Coaches
+    getTrainees: [User!]!
+    getCoaches: [Users!]!
+    
     #//* Messages
     getMessagesBy(param: String!, value: String!): [Message]
   }
@@ -104,6 +108,7 @@ module.exports = gql`
     foodEntries: [FoodEntry!]!
     exerciseEntries: [ExerciseEntry!]!
     stripe_id: String
+    trainees: [Coaches!]!
   }
 
   type Food {
@@ -158,6 +163,11 @@ module.exports = gql`
     date: Date!
     user_id: User!
     amount_paid: Int
+  }
+
+  type Coaches {
+    coach: User!
+    trainee: User!
   }
 
   type Message {
@@ -216,6 +226,11 @@ module.exports = gql`
     date: Date!
     weight: Float!
     user_id: ID!
+  }
+
+  input CoachInput {
+    coach_id: ID!
+    trainee_id: ID!
   }
 
   input MessageInput {
