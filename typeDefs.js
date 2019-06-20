@@ -45,6 +45,9 @@ module.exports = gql`
     #//* Coaches
     getTrainees: [User!]!
     getCoaches: [Users!]!
+    
+    #//* Messages
+    getMessagesBy(param: String!, value: String!): [Message]
   }
 
   type Mutation {
@@ -84,11 +87,11 @@ module.exports = gql`
     deleteWeightEntry(id: ID!): Int!
 
     #//*Billing
-    createSubscription(source: String!, email: String!): User!
+    createSubscription(source: String!, email: String!, amount: Int!): User!
 
-    #//*Coaches
-    addTrainees(input: CoachInput!): Users!
-    deleteTrainees(input: CoachInput!): Int!
+    #//*Messages
+    addMessage(input: MessageInput!): Message!
+    deleteMessage(id: ID!): Int!
   }
 
   scalar Date
@@ -167,6 +170,16 @@ module.exports = gql`
     trainee: User!
   }
 
+  type Message {
+    id: ID!
+    created_at: Date!
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: User!
+    recipient: User!
+  }
+
   input ExerciseEntryInput {
     exerciseEntryDate: Date!
     exerciseName: String!
@@ -218,5 +231,13 @@ module.exports = gql`
   input CoachInput {
     coach_id: ID!
     trainee_id: ID!
+  }
+
+  input MessageInput {
+    type: String!
+    text: String!
+    read: Boolean!
+    sender: ID!
+    recipient: ID!
   }
 `;
