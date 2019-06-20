@@ -43,9 +43,9 @@ module.exports = gql`
     getWeightEntries: [WeightEntry]
 
     #//* Coaches
-    getTrainees: [User!]!
-    getCoaches: [Users!]!
-    
+    getTrainees(coach_id: ID!): [User!]!
+    getCoaches(trainer_id: ID!): [Users!]!
+
     #//* Messages
     getMessagesBy(param: String!, value: String!): [Message]
   }
