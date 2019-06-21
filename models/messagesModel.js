@@ -4,7 +4,8 @@ module.exports = {
   findBy,
   findById,
   add,
-  remove
+  remove,
+  edit
 };
 
 function findBy(filter) {
@@ -26,4 +27,12 @@ function remove(id) {
   return db("messages")
     .where("id", id)
     .del();
+}
+
+async function edit(id, message) {
+  await db("messages")
+    .where("id", id)
+    .update(message);
+
+  return findById(id);
 }

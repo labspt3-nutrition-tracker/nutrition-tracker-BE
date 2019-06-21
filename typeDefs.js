@@ -38,14 +38,13 @@ module.exports = gql`
     getBillingHistory(id: ID!): [Billing!]
     getRecentBilling(id: ID!): Billing!
 
-
     #//* Weightentry
     getWeightEntries: [WeightEntry]
 
     #//* Coaches
     getTrainees: [User!]!
-    getCoaches: [Users!]!
-    
+    getCoaches: [User!]!
+
     #//* Messages
     getMessagesBy(param: String!, value: String!): [Message]
   }
@@ -92,6 +91,7 @@ module.exports = gql`
     #//*Messages
     addMessage(input: MessageInput!): Message!
     deleteMessage(id: ID!): Int!
+    updateMessage(id: ID!, input: MessageInput!): Message!
   }
 
   scalar Date
