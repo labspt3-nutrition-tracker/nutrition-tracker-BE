@@ -42,8 +42,8 @@ module.exports = gql`
     getWeightEntries: [WeightEntry]
 
     #//* Coaches
-    getTrainees: [User!]!
-    getCoaches: [User!]!
+    getTrainees(coach_id: ID!): [User!]!
+    getCoaches(trainee_id: ID!): [User!]!
 
     #//* Messages
     getMessagesBy(param: String!, value: String!): [Message]
@@ -92,6 +92,10 @@ module.exports = gql`
     addMessage(input: MessageInput!): Message!
     deleteMessage(id: ID!): Int!
     updateMessage(id: ID!, input: MessageInput!): Message!
+
+    #//*Coaches
+    addTrainees(coach_id: ID!, trainee_id: ID!): User!
+    deleteTrainees(coach_id: ID!, trainee_id: ID!): Int!
   }
 
   scalar Date
