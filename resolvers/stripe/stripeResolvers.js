@@ -49,14 +49,13 @@ module.exports = {
                     amount_paid: 700
                 }
 
-                console.log("user",user)
-
                 console.log("create",billingInfo)
 
                 await Billing.add(billingInfo)
-                await User.edit(user.id, user);
 
-                return user;
+                const newUser = await User.edit(user.id, user);
+                console.log("user", newUser)
+                return newUser;
             }else{
 
                 const customer = await stripe.customers.create({
@@ -78,14 +77,12 @@ module.exports = {
                     amount_paid: 1000
                 }
 
-                console.log("user",user)
-
                 console.log("create",billingInfo)
 
                 await Billing.add(billingInfo)
-                await User.edit(user.id, user);
-
-                return user;
+                const newUser = await User.edit(user.id, user);
+                console.log("user", newUser)
+                return newUser;
             }
         }
     }
