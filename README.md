@@ -52,7 +52,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getCurrentUser query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getCurrentUser.png">
   </p>
 
-  #### getUsers: this query returns every user from the database
+  #### getUsers: this query returns every user from the API
 
   The following is an example of a getUsers query:
 
@@ -62,9 +62,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
   #### getUserBy: this query uses two arguments
-  1) param: a column from the User model
-  2) value: a String or Int value
-   to check the database for a user that has that specific param - value match.
+    1) param: a column from the User model
+    2) value: a String or Int value
+  to check the API for a user that has that specific param - value match.
 
   The following is an example of a getUserBy query:
 
@@ -105,3 +105,45 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
   ### **User - Mutations**
+
+  #### addUser: this mutation inserts a user into the API
+  > Note: It uses the following arguments wrapped in an input object with all being mandatory except for the weight
+
+  >firstName: String!
+  lastName: String!
+  username: String!
+  email: String!
+  userType: String!
+  calorieGoal: Int!
+  weight: Int
+
+  The following is an example of a addUser mutation:
+
+  <p align="center">
+    <img alt="getExerciseEntriesByUserId query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/addUser.png"
+  </p>
+
+  #### updateUser: this mutation edits an existing user entry in the API. Like the addUser, it requires the same mandatory arguments. Only weight is optional
+
+  It differs in that it has two main argument:
+    1) id
+    2) input object - The same input from addUser
+
+  The following is an example of an updateUser mutation:
+
+  <p align="center">
+    <img alt="getExerciseEntriesByUserId query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/updateUser.png"
+  </p>
+
+  ####deleteUser: this mutation deletes a user from the API
+
+  It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
+
+  The following is an example of a deleteUser mutation:
+
+  <p align="center">
+    <img alt="getExerciseEntriesByUserId query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/deleteUser.png"
+  </p>
