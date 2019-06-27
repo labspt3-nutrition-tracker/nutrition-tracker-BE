@@ -41,9 +41,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   > * trainees
 
 
-  ### **User - Queries**
+### **User - Queries**
 
-  #### getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
+#### getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
 
   > { "authorization": "THE_GOOGLE_TOKEN_GENERATED"}
 
@@ -62,7 +62,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
   </p>
 
-  #### getUserBy: this query uses two arguments
+#### getUserBy: this query uses two arguments
     1) param: a column from the User model
     2) value: a String value
   to check the API for a user that has that specific param - value match.
@@ -74,7 +74,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
   </p>
 
-  #### getUserById: this query uses an userId argument to query a user with that specific id.
+#### getUserById: this query uses an userId argument to query a user with that specific id.
 
   The following is an example of a getUserById query:
 
@@ -83,7 +83,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
   </p>
 
-  #### getFoodEntriesByUserId: this query uses an userId argument to query all the food that belongs to that specific userId.
+#### getFoodEntriesByUserId: this query uses an userId argument to query all the food that belongs to that specific userId.
 
   The following is an example of a getFoodEntriesByUserId query:
 
@@ -94,7 +94,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getFoodEntriesByUserId.png"
   </p>
 
-  #### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
+#### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
 
   The following is an example of a getExerciseEntriesByUserId query:
 
@@ -105,9 +105,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getExerciseEntriesByUserId%20.png"
   </p>
 
-  ### **User - Mutations**
+### **User - Mutations**
 
-  #### addUser: this mutation inserts a user into users table in the API
+#### addUser: this mutation inserts a user into users table in the API
 
   > Note: It uses the following arguments wrapped in an input object with all being mandatory except for the weight
 
@@ -126,7 +126,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/addUser.png"
   </p>
 
-  #### updateUser: this mutation edits an existing user entry in the API. Like the addUser, it requires the same mandatory arguments. Only weight is optional
+#### updateUser: this mutation edits an existing user entry in the API. Like the addUser, it requires the same mandatory arguments. Only weight is optional
 
   It differs in that it has two main argument:
     1) id
@@ -139,7 +139,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/updateUser.png"
   </p>
 
-  #### deleteUser: this mutation deletes a user from the API
+#### deleteUser: this mutation deletes a user from the API
 
   It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
 
@@ -163,9 +163,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
    * edamam_id
    * foodEntries - uses foodEntries model
 
-  ### **Food - Queries**
+### **Food - Queries**
 
-  #### getFoods: this query gets all the existing Foods in the database
+#### getFoods: this query gets all the existing Foods in the database
 
   The following is an example of a getFoods query:
 
@@ -173,7 +173,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getFoods query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/getFoods.png">
   </p>
 
-  #### getFoodById: this query gets a Food object using it's id
+#### getFoodById: this query gets a Food object using it's id
 
   The following is an example of a getFoodById query:
 
@@ -181,9 +181,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getFoodbyId query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/getFoodById.png">
   </p>
 
-  ### **Food - Mutations**
+### **Food - Mutations**
 
-  #### addFood: this mutation inserts a food object into the foods table
+#### addFood: this mutation inserts a food object into the foods table
 
   > Note: It uses the following arguments wrapped in an input object with all being mandatory except for edamam_id
 
@@ -200,7 +200,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="addFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/addFood.png">
   </p>
 
-  #### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
+#### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
 
   It differs in that it has two main argument:
     1) id
@@ -212,7 +212,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="updateFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/updateFood.png">
   </p>
 
-  #### deleteFood: this mutation deletes a food object from the API
+#### deleteFood: this mutation deletes a food object from the API
 
   It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
 
@@ -238,9 +238,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     * foodEntries -uses foodEntry Model
 
 
-  ### **Meal Category - Queries**
+### **Meal Category - Queries**
 
-  #### getMealCategories: this query gets all of the existing mealCateogries in the API
+#### getMealCategories: this query gets all of the existing mealCateogries in the API
 
   The following is an example of a getMealCategories query:
 
@@ -248,7 +248,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getMealCategories query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategory.png">
   </p>
 
-  #### getMealCategoryBy: this query uses two arguments
+#### getMealCategoryBy: this query uses two arguments
     1) param: a column from the User model
     2) value: a String value
 
@@ -300,3 +300,5 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   <p align="center">
     <img alt="getFoodEntriesById query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodEntries/getFoodEntries_ById.png">
   </p>  
+
+### **Food Entry - Mutations**  
