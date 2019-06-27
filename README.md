@@ -40,7 +40,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   > * trainees
 
 
-  ### Queries
+  ### **User - Queries**
 
   #### getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
 
@@ -86,7 +86,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following is an example of a getFoodEntriesByUserId query:
 
-  >Note: This query uses the FoodEntries Model which will be mentioned in a further section
+  > Note: This query uses the FoodEntries Model which will be mentioned in a further section
 
   <p align="center">
     <img alt="getFoodEntriesByUserId query"
@@ -97,11 +97,11 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following is an example of a getExerciseEntriesByUserId query:
 
-    >Note: This query uses the ExerciseEntries Model which will be mentioned in a further section
+    > Note: This query uses the ExerciseEntries Model which will be mentioned in a further section
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getExerciseEntriesByUserId%20.png"
   </p>
 
-  As mentioned prior, you can add any of the data you want returned from the User Model.
+  ### **User - Mutations**
