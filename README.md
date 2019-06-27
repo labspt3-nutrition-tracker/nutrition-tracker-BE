@@ -73,7 +73,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
   </p>
 
-#### getUserById: this query uses an userId argument to query a user with that specific id.
+#### getUserById: this query uses a userId argument to query a user with that specific id.
 
   The following is an example of a getUserById query:
 
@@ -82,7 +82,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
   </p>
 
-#### getFoodEntriesByUserId: this query uses an userId argument to query all the food that belongs to that specific userId.
+#### getFoodEntriesByUserId: this query uses a userId argument to query all the food that belongs to that specific userId.
 
   The following is an example of a getFoodEntriesByUserId query:
 
@@ -93,7 +93,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getFoodEntriesByUserId.png"
   </p>
 
-#### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
+#### getExerciseEntriesByUserId: this query uses a userId argument to query all the exercise activities that belongs to that specific userId.
 
   The following is an example of a getExerciseEntriesByUserId query:
 
@@ -110,13 +110,13 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   > Note: It uses the following arguments wrapped in an input object with all being mandatory except for the weight
 
-  >firstName: String!
-  lastName: String!
-  username: String!
-  email: String!
-  userType: String!
-  calorieGoal: Int!
-  weight: Int
+      firstName: String!
+      lastName: String!
+      username: String!
+      email: String!
+      userType: String!
+      calorieGoal: Int!
+      weight: Int
 
   The following is an example of a addUser mutation:
 
@@ -372,7 +372,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntryBy.png"
   </p>
 
-#### getExerciseEntryById: this query uses an exerice entry id argument to query a user with that specific id.
+#### getExerciseEntryById: this query uses an exerice entry id argument to query an exercise entry with that specific id.
 
   The following is an example of a getExerciseEntryById query:
 
