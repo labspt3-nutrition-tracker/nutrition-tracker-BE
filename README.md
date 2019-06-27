@@ -44,3 +44,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   * getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
   > { "authorization": "THE_GOOGLE_TOKEN_GENERATED"}
+
+  > The following is an example of a query:
+
+  ![getCurrentUser query](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/getCurrentUser.png "getCurrentUser query")
+
+  As mentioned prior, you can add any of the data you want returned from the User Model. 
