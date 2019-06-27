@@ -153,14 +153,14 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following are the data that can be returned in Food Model Queries:
 
-  > * id
-  > * foodName
-  > * caloriesPerServ
-  > * fats
-  > * carbs
-  > * proteins
-  > * edamam_id
-  > * foodEntries - uses foodEntries model
+   * id
+   * foodName
+   * caloriesPerServ
+   * fats
+   * carbs
+   * proteins
+   * edamam_id
+   * foodEntries - uses foodEntries model
 
   ### **Food - Queries**
 
@@ -185,12 +185,12 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   #### addFood: this mutation inserts a food object into the foods table
     > Note: It uses the following arguments wrapped in an input object with all being mandatory except for edamam_id
 
-    >  foodName: String!
-    >  caloriesPerServ: Int!
-    >  fats: Float!
-    >  carbs: Float!
-    >  proteins: Float!
-    >  edamam_id: String
+      foodName: String!
+      caloriesPerServ: Int!
+      fats: Float!
+      carbs: Float!
+      proteins: Float!
+      edamam_id: String
 
   The following is an example of an addFood mutation
 
@@ -224,20 +224,16 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
     Due to executive decisions, we've decided remove update, edit, and delete of meal categories in order to simplify meals into 4 categories.
 
-    >  1) id: 1, mealCategoryName: Breakfast
-    >  2) id: 2, mealCategoryName: Lunch
-    >  3) id: 3, mealCategoryName: Snack
-    >  4) id: 4, mealCategoryName: Dinner
-
-
+      1) id: 1, mealCategoryName: Breakfast
+      2) id: 2, mealCategoryName: Lunch
+      3) id: 3, mealCategoryName: Snack
+      4) id: 4, mealCategoryName: Dinner
 
     The following are the data that can be returned in Meal Category Model Queries:
 
-
-
-    >  * id
-    >  * mealCategoryName
-    >  * foodEntries -uses foodEntry Model
+      * id
+      * mealCategoryName
+      * foodEntries -uses foodEntry Model
 
 
 
