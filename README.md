@@ -57,7 +57,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   ### The following is an example of a getUsers query:
 
   <p align="center">
-
+    <img alt="getUsers query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/getUsers.png"?
   </p>
 
   As mentioned prior, you can add any of the data you want returned from the User Model.
