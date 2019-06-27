@@ -361,7 +361,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntries.png"?
   </p>
 
-#### getExerciseEntryBy: this query uses two arguments to check the API for a exercise entry that has that specific param - value match.
+#### getExerciseEntryBy: this query uses two arguments to check the API for an exercise entry that has that specific param - value match.
     1) param: a column from the exercise entry model
     2) value: a String value
 
@@ -372,7 +372,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntryBy.png"
   </p>
 
-#### getExerciseEntryById: this query uses an exerice entry id argument to query an exercise entry with that specific id.
+#### getExerciseEntryById: this query uses an exercise entry id argument to query an exercise entry with that specific id.
 
   The following is an example of a getExerciseEntryById query:
 
@@ -430,3 +430,19 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
    * date
    * weight
    * user_id - This uses the user model data
+
+#### getWeightEntries: this query returns every weight entries from the API
+
+  The following is an example of a getWeightEntries query:
+
+  <p align="center">
+    <img alt="getWeightEntries" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/getWeightEntries.png"?
+  </p>
+
+#### getWeightEntriesByUserId: this query uses a userId as an argument in order to get all the weight entries made by that user.
+
+  The following is an example of a getWeightEntriesByUserId query:
+
+  <p align="center">
+    <img alt="getWeightEntriesByUserId query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/getWeightEntriesByUserId.png"
+  </p>   
