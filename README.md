@@ -470,18 +470,18 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
       1) id
       2) input object - The same input from addWeightEntry
 
-    The following is an example of an updateWeightEntry mutation  
+  The following is an example of an updateWeightEntry mutation  
 
-    <p align="center">
-      <img alt="updateWeightEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/updateWeightEntry.png">
-    </p>
+  <p align="center">
+    <img alt="updateWeightEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/updateWeightEntry.png">
+  </p>
 
-  #### deleteWeightEntry: this mutation deletes an weight entry object from the API
+#### deleteWeightEntry: this mutation deletes an weight entry object from the API
 
-    It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
+  It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
 
-    The following is an example of a deleteWeightEntry mutation:
+  The following is an example of a deleteWeightEntry mutation:
 
-    <p align="center">
-      <img alt="deleteWeightEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/deleteWeightEntry.png">
-    </p>
+  <p align="center">
+    <img alt="deleteWeightEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/deleteWeightEntry.png">
+  </p>
