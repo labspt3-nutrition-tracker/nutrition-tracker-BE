@@ -421,3 +421,12 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   <p align="center">
     <img alt="deleteExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/deleteExerciseEntry.png">
   </p>
+
+## WeightEntry Model
+
+  The following are the data that can be returned in weightEntry Model Queries:
+
+   * id  
+   * date
+   * weight
+   * user_id - This uses the user model data
