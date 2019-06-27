@@ -227,11 +227,12 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     > 2) id: 2, mealCategoryName: Lunch
     > 3) id: 3, mealCategoryName: Snack
     > 4) id: 4, mealCategoryName: Dinner
-    
+
     The following are the data that can be returned in Meal Category Model Queries:
 
     > * id
     > * mealCategoryName
     > * foodEntries -uses foodEntry Model
 
-    ### **Meal Category - Queries**
+
+  ### **Meal Category - Queries**
