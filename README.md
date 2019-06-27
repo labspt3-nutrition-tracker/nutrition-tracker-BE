@@ -64,7 +64,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### getUserBy: this query uses two arguments
     1) param: a column from the User model
-    2) value: a String or Int value
+    2) value: a String value
   to check the API for a user that has that specific param - value match.
 
   The following is an example of a getUserBy query:
@@ -246,5 +246,27 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of a getMealCategories query:
 
   <p align="center">
-    <img alt="getMealCategories query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategories.png">
+    <img alt="getMealCategories query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategory.png">
+  </p>
+
+  #### getMealCategoryBy: this query uses two arguments
+    1) param: a column from the User model
+    2) value: a String value
+
+  to check the API for a mealCategory that has that specific param - value match.
+
+  The following is an example of a getMealCategoryBy query:
+
+  <p align="center">
+    <img alt="getMealCategoryBy query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategoryBy.png"
+  </p>
+
+  #### getMealCategoryById: this query uses an meal category's id as an argument to query a meal category with that specific id.
+
+  The following is an example of a getMealCategoryById query:
+
+  <p align="center">
+    <img alt="getMealCategoryById query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategoryById.png"
   </p>
