@@ -62,10 +62,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
   </p>
 
-#### getUserBy: this query uses two arguments
+#### getUserBy: this query uses two arguments to check the API for a user that has that specific param - value match.
     1) param: a column from the User model
     2) value: a String value
-  to check the API for a user that has that specific param - value match.
 
   The following is an example of a getUserBy query:
 
@@ -248,11 +247,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getMealCategories query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategory.png">
   </p>
 
-#### getMealCategoryBy: this query uses two arguments
+#### getMealCategoryBy: this query uses two arguments to check the API for a mealCategory that has that specific param - value match.
     1) param: a column from the User model
     2) value: a String value
-
-  to check the API for a mealCategory that has that specific param - value match.
 
   The following is an example of a getMealCategoryBy query:
 
@@ -261,7 +258,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategoryBy.png"
   </p>
 
-  #### getMealCategoryById: this query uses an meal category's id as an argument to query a meal category with that specific id.
+#### getMealCategoryById: this query uses an meal category's id as an argument to query a meal category with that specific id.
 
   The following is an example of a getMealCategoryById query:
 
@@ -355,35 +352,34 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ### **Exercise Entry - Queries**
 
-#### getExerciseEntries: this query returns every user from the API
+#### getExerciseEntries: this query returns every exercise entries from the API
 
-  The following is an example of a getUsers query:
+  The following is an example of a getExerciseEntries query:
 
   <p align="center">
-    <img alt="getUsers query"
-    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
+    <img alt="getExerciseEntries query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntries.png"?
   </p>
 
-#### getExerciseEntryBy: this query uses two arguments
-    1) param: a column from the User model
+#### getExerciseEntryBy: this query uses two arguments to check the API for a exercise entry that has that specific param - value match.
+    1) param: a column from the exercise entry model
     2) value: a String value
-  to check the API for a user that has that specific param - value match.
 
-  The following is an example of a getUserBy query:
-
-  <p align="center">
-    <img alt="getUserBy query"
-    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
-  </p>
-
-#### getExerciseEntryById: this query uses an userId argument to query a user with that specific id.
-
-  The following is an example of a getUserById query:
+  The following is an example of a getExerciseEntryBy query:
 
   <p align="center">
-    <img alt="getUserById query"
-    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
+    <img alt="getExerciseEntryBy query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntryBy.png"
+  </p>
+
+#### getExerciseEntryById: this query uses an exerice entry id argument to query a user with that specific id.
+
+  The following is an example of a getExerciseEntryById query:
+
+  <p align="center">
+    <img alt="getExerciseEntryById query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/getExerciseEntryById.png"
   </p>
 
 
-### **EXercise Entry - Mutations**
+### **Exercise Entry - Mutations**
