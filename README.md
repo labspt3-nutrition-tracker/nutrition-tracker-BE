@@ -42,40 +42,40 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   ### Queries
 
-  * getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
+  ### getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
 
   > { "authorization": "THE_GOOGLE_TOKEN_GENERATED"}
 
-  ### The following is an example of a getCurrentUser query:
+  #### The following is an example of a getCurrentUser query:
 
   <p align="center">
     <img alt="getCurrentUser query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getCurrentUser.png">
   </p>
 
-  * getUsers: this query returns every user from the database
+  ### getUsers: this query returns every user from the database
 
-  ### The following is an example of a getUsers query:
+  #### The following is an example of a getUsers query:
 
   <p align="center">
     <img alt="getUsers query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
   </p>
 
-  * getUserBy: this query uses two arguments
+  ### getUserBy: this query uses two arguments
   1) param: a column from the User model
   2) value: a String or Int value
    to check the database for a user that has that specific param - value match.
 
-  ### The following is an example of a getUserBy query:
+  #### The following is an example of a getUserBy query:
 
   <p align="center">
     <img alt="getUserBy query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
   </p>
 
-  * getUserById: this query uses an id argument to query a user with that specific id.
+  ### getUserById: this query uses an id argument to query a user with that specific id.
 
-  ### The following is an example of a getUserById query:
+  #### The following is an example of a getUserById query:
 
   <p align="center">
     <img alt="getUserById query"
