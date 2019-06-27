@@ -162,3 +162,5 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   > * foodEntries - uses foodEntries model
 
   ### **Food - Queries**
+
+  
