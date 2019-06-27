@@ -222,21 +222,20 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="deleteFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/deleteFood.png">
   </p>
 
-  ## Meal Category Model
+## Meal Category Model
 
-    Due to executive decisions, we've decided remove update, edit, and delete of meal categories in order to simplify meals into 4 categories.
+  Due to executive decisions, we've decided remove update, edit, and delete of meal categories in order to simplify meals into 4 categories.
 
-      1) id: 1, mealCategoryName: Breakfast
-      2) id: 2, mealCategoryName: Lunch
-      3) id: 3, mealCategoryName: Snack
-      4) id: 4, mealCategoryName: Dinner
+    1) id: 1, mealCategoryName: Breakfast  
+    2) id: 2, mealCategoryName: Lunch
+    3) id: 3, mealCategoryName: Snack
+    4) id: 4, mealCategoryName: Dinner
 
-    The following are the data that can be returned in Meal Category Model Queries:
+  The following are the data that can be returned in Meal Category Model Queries:
 
-      * id
-      * mealCategoryName
-      * foodEntries -uses foodEntry Model
-
+    * id
+    * mealCategoryName
+    * foodEntries -uses foodEntry Model
 
 
   ### **Meal Category - Queries**
@@ -270,3 +269,17 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getMealCategoryById query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategoryById.png"
   </p>
+
+## FoodEntry Model
+
+  The following are the data that can be returned in FoodEntry Model Queries:
+
+   * id  
+   * date
+   * food_id - can return food model data     
+   * user_id - can return user model data
+   * servingQty
+   * meal_category_id - can return meal category model data
+
+
+### **Food - Queries**
