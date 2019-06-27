@@ -73,13 +73,31 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
   </p>
 
-  #### getUserById: this query uses an id argument to query a user with that specific id.
+  #### getUserById: this query uses an userId argument to query a user with that specific id.
 
   #### The following is an example of a getUserById query:
 
   <p align="center">
     <img alt="getUserById query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
+  </p>
+
+  #### getFoodEntriesByUserId: this query uses an userId argument to query all the food that belongs to that specific userId.
+
+  #### The following is an example of a getFoodEntriesByUserId query:
+
+  <p align="center">
+    <img alt="getFoodEntriesByUserId query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getFoodEntriesByUserId.png"
+  </p>
+
+  #### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
+
+  #### The following is an example of a getExerciseEntriesByUserId query:
+
+  <p align="center">
+    <img alt="getExerciseEntriesByUserId query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getExerciseEntriesByUserId%20.png"
   </p>
 
   As mentioned prior, you can add any of the data you want returned from the User Model.
