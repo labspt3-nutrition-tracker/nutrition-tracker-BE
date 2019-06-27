@@ -292,3 +292,11 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getFoodentries query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodEntries/getFoodEntries.png"
   </p>
+
+#### getFoodEntriesById: this query uses the foodEntries' id and gets a Food entry object using it's id
+
+  The following is an example of a getFoodEntriesById query:
+
+  <p align="center">
+    <img alt="getFoodEntriesById query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodEntries/getFoodEntriesById.png">
+  </p>  
