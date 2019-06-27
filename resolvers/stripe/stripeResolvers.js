@@ -49,6 +49,8 @@ module.exports = {
                     amount_paid: 700
                 }
 
+                console.log("user",user)
+
                 console.log("create",billingInfo)
 
                 await Billing.add(billingInfo)
@@ -75,6 +77,8 @@ module.exports = {
                     stripeId: user.stripe_id,
                     amount_paid: 1000
                 }
+
+                console.log("user",user)
 
                 console.log("create",billingInfo)
 
