@@ -7,6 +7,6 @@ As of now, Nutrition Tracker can only be used in conjunction with [Google's Oaut
 
 #### Covered Use Cases
 
-..* Creating, Updating, Reading Users,
-..* Full CRUD functionality for Food, FoodEntry, MealCategory,  Messages, ExerciseEntry, Weight
-..* Create, Read, and Delete Coaches and Strip Subscriptions
+  * Creating, Updating, Reading Users,
+  * Full CRUD functionality for Food, FoodEntry, MealCategory,  Messages, ExerciseEntry, Weight
+  * Create, Read, and Delete Coaches and Strip Subscriptions
