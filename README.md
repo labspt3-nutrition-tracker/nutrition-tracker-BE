@@ -53,7 +53,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getCurrentUser query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getCurrentUser.png">
   </p>
 
-  #### getUsers: this query returns every user from the API
+#### getUsers: this query returns every user from the API
 
   The following is an example of a getUsers query:
 
@@ -351,6 +351,39 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   * exerciseEntryDate
   * exerciseName
   * caloriesBurned
-  * exercise_entry_user_id - uses the User Model 
+  * exercise_entry_user_id - uses the User Model
 
-### **Food - Queries**
+### **Exercise Entry - Queries**
+
+#### getExerciseEntries: this query returns every user from the API
+
+  The following is an example of a getUsers query:
+
+  <p align="center">
+    <img alt="getUsers query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
+  </p>
+
+#### getExerciseEntryBy: this query uses two arguments
+    1) param: a column from the User model
+    2) value: a String value
+  to check the API for a user that has that specific param - value match.
+
+  The following is an example of a getUserBy query:
+
+  <p align="center">
+    <img alt="getUserBy query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
+  </p>
+
+#### getExerciseEntryById: this query uses an userId argument to query a user with that specific id.
+
+  The following is an example of a getUserById query:
+
+  <p align="center">
+    <img alt="getUserById query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
+  </p>
+
+
+### **EXercise Entry - Mutations**
