@@ -340,9 +340,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
 
-## Food Model
+## Exercise Entry Model
 
-  The following are the data that can be returned in Food Model Queries:
+  The following are the data that can be returned in Exercise Model Queries:
 
   * id
   * exerciseEntryDate
@@ -485,3 +485,16 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   <p align="center">
     <img alt="deleteWeightEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/WeightEntriesImages/deleteWeightEntry.png">
   </p>
+
+## Coaches Model
+
+  The following are the data that can be returned in Exercise Model Queries:  
+
+  * id
+  * foodName
+  * caloriesPerServ
+  * fats
+  * carbs
+  * proteins
+  * edamam_id
+  * foodEntries - uses foodEntries model
