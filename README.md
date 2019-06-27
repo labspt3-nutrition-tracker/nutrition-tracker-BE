@@ -20,6 +20,28 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     * Coaches
     * Stripe Subscriptions
 
- > Using the API for the front end requires a check using Google's  Oauth2 Client API. This would check against the user info and the result would result in an active token to be used in the headers
+ > Using the API for the front end requires a check using Google's  Oauth2 Client API. This would check against the user info and would result in an active token to be used in the headers
 
- 
+## User Model
+
+  The following are the data that can be returned in User Model Queries:
+
+  > * id
+  > * firstName
+  > * lastName
+  > * username
+  > * email
+  > * userType
+  > * calorieGoal
+  > * weight
+  > * foodEntries
+  > * exerciseEntries
+  > * stripe_id
+  > * trainees
+
+
+  ### Queries
+
+  * getCurrentUser:
+   * only for the front end
+   * this queries check if a user is logged in using the token created
