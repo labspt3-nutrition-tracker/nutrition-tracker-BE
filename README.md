@@ -98,7 +98,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following is an example of a getExerciseEntriesByUserId query:
 
-    > Note: This query uses the ExerciseEntries Model which will be mentioned in a further section
+  > Note: This query uses the ExerciseEntries Model which will be mentioned in a further section
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId query"
