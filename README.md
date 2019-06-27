@@ -137,7 +137,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/updateUser.png"
   </p>
 
-  ####deleteUser: this mutation deletes a user from the API
+  #### deleteUser: this mutation deletes a user from the API
 
   It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
 
