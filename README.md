@@ -282,4 +282,13 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
    * meal_category_id - can return meal category model data
 
 
-### **Food - Queries**
+### **Food Entry  - Queries**
+
+#### getFoodEntries: this query is used to get all the foodEntries in the API
+
+  The following is an example of a getFoodEntries query:
+
+  <p align="center">
+    <img alt="getFoodentries query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodEntries/getFoodEntries.png"
+  </p>
