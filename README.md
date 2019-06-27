@@ -393,8 +393,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     caloriesBurned: Int!
     exercise_entry_user_id: ID!
 
-    The following is an example of an addExerciseEntry mutation
+  The following is an example of an addExerciseEntry mutation
 
-    <p align="center">
-      <img alt="addExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/addExerciseEntry.png">
-    </p>
+  <p align="center">
+    <img alt="addExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/addExerciseEntry.png">
+  </p>
