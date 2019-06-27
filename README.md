@@ -61,4 +61,25 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
   </p>
 
+  * getUserBy: this query uses two arguments
+  1) param: a column from the User model
+  2) value: a String or Int value
+   to check the database for a user that has that specific param - value match.
+
+  ### The following is an example of a getUserBy query:
+
+  <p align="center">
+    <img alt="getUserBy query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserBy.png"
+  </p>
+
+  * getUserById: this query uses an id argument to query a user with that specific id.
+
+  ### The following is an example of a getUserById query:
+
+  <p align="center">
+    <img alt="getUserById query"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUserById.png"
+  </p>
+
   As mentioned prior, you can add any of the data you want returned from the User Model.
