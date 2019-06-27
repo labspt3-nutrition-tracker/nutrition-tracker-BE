@@ -398,3 +398,26 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   <p align="center">
     <img alt="addExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/addExerciseEntry.png">
   </p>
+
+
+#### updateExerciseEntry: this mutation edits an existing exercise entry object entry using two arguments. Like addExerciseEntry, it uses the same mandatory arguments in input.
+
+  It differs in that it has two main argument:
+    1) id
+    2) input object - The same input from addExerciseEntry
+
+  The following is an example of an updateExerciseEntry mutation  
+
+  <p align="center">
+    <img alt="updateExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/updateExerciseEntry.png">
+  </p>
+
+#### deleteExerciseEntry: this mutation deletes an exercise entry object from the API
+
+  It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
+
+  The following is an example of a deleteExerciseEntry mutation:
+
+  <p align="center">
+    <img alt="deleteExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/deleteExerciseEntry.png">
+  </p>
