@@ -46,7 +46,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   > { "authorization": "THE_GOOGLE_TOKEN_GENERATED"}
 
-  #### The following is an example of a getCurrentUser query:
+  The following is an example of a getCurrentUser query:
 
   <p align="center">
     <img alt="getCurrentUser query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getCurrentUser.png">
@@ -54,7 +54,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### getUsers: this query returns every user from the database
 
-  #### The following is an example of a getUsers query:
+  The following is an example of a getUsers query:
 
   <p align="center">
     <img alt="getUsers query"
@@ -66,7 +66,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   2) value: a String or Int value
    to check the database for a user that has that specific param - value match.
 
-  #### The following is an example of a getUserBy query:
+  The following is an example of a getUserBy query:
 
   <p align="center">
     <img alt="getUserBy query"
@@ -75,7 +75,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### getUserById: this query uses an userId argument to query a user with that specific id.
 
-  #### The following is an example of a getUserById query:
+  The following is an example of a getUserById query:
 
   <p align="center">
     <img alt="getUserById query"
@@ -84,7 +84,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### getFoodEntriesByUserId: this query uses an userId argument to query all the food that belongs to that specific userId.
 
-  #### The following is an example of a getFoodEntriesByUserId query:
+  The following is an example of a getFoodEntriesByUserId query:
 
   <p align="center">
     <img alt="getFoodEntriesByUserId query"
@@ -93,7 +93,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
 
-  #### The following is an example of a getExerciseEntriesByUserId query:
+  The following is an example of a getExerciseEntriesByUserId query:
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId query"
