@@ -347,10 +347,10 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following are the data that can be returned in Food Model Queries:
 
-    * id
-    * exerciseEntryDate
-    * exerciseName
-    * caloriesBurned
-    * exercise_entry_user_id - uses the User Model 
+  * id
+  * exerciseEntryDate
+  * exerciseName
+  * caloriesBurned
+  * exercise_entry_user_id - uses the User Model 
 
 ### **Food - Queries**
