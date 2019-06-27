@@ -42,6 +42,5 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   ### Queries
 
-  * getCurrentUser:
-   * only for the front end
-   * this queries check if a user is logged in using the token created
+  * getCurrentUser: this query requires an object in the HTTP header with the following key value pairs.
+  > { "authorization": "THE_GOOGLE_TOKEN_GENERATED"}
