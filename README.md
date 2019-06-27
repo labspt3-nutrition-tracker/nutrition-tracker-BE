@@ -197,7 +197,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="addFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/addFood.png">
   </p>
 
-  ### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
+  #### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
 
   It differs in that it has two main argument:
     1) id
@@ -216,5 +216,5 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of a deleteFood mutation:
 
   <p align="center">
-    <img alt="updateFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/deleteFood.png">
+    <img alt="deleteFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/deleteFood.png">
   </p>
