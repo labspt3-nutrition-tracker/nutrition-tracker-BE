@@ -34,8 +34,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   > * userType
   > * calorieGoal
   > * weight
-  > * foodEntries
-  > * exerciseEntries
+  > * foodEntries - uses foodEntries model
+  > * exerciseEntries - uses exerciseEntries model
   > * stripe_id
   > * trainees
 
@@ -147,3 +147,18 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="getExerciseEntriesByUserId query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/deleteUser.png"
   </p>
+
+## Food Model
+
+  The following are the data that can be returned in Food Model Queries:
+
+  > * id
+  > * foodName
+  > * caloriesPerServ
+  > * fats
+  > * carbs
+  > * proteins
+  > * edamam_id
+  > * foodEntries - uses foodEntries model
+
+  ### **Food - Queries**
