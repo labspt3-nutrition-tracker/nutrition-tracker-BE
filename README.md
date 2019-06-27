@@ -86,6 +86,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following is an example of a getFoodEntriesByUserId query:
 
+  >Note: This query uses the FoodEntries Model which will be mentioned in a further section
+
   <p align="center">
     <img alt="getFoodEntriesByUserId query"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getFoodEntriesByUserId.png"
@@ -94,6 +96,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   #### getExerciseEntriesByUserId: this query uses an userId argument to query all the exercise activities that belongs to that specific userId.
 
   The following is an example of a getExerciseEntriesByUserId query:
+
+    >Note: This query uses the ExerciseEntries Model which will be mentioned in a further section
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId query"
