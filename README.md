@@ -106,7 +106,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   ### **User - Mutations**
 
-  #### addUser: this mutation inserts a user into the API
+  #### addUser: this mutation inserts a user into users table in the API
   > Note: It uses the following arguments wrapped in an input object with all being mandatory except for the weight
 
   >firstName: String!
@@ -120,7 +120,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of a addUser mutation:
 
   <p align="center">
-    <img alt="getExerciseEntriesByUserId query"
+    <img alt="getExerciseEntriesByUserId mutation"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/addUser.png"
   </p>
 
@@ -133,7 +133,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of an updateUser mutation:
 
   <p align="center">
-    <img alt="getExerciseEntriesByUserId query"
+    <img alt="getExerciseEntriesByUserId mutation"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/updateUser.png"
   </p>
 
@@ -144,7 +144,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of a deleteUser mutation:
 
   <p align="center">
-    <img alt="getExerciseEntriesByUserId query"
+    <img alt="getExerciseEntriesByUserId mutation"
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/deleteUser.png"
   </p>
 
@@ -163,4 +163,58 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   ### **Food - Queries**
 
-  
+  #### getFoods: this query gets all the existing Foods in the database
+
+  The following is an example of a getFoods query:
+
+  <p align="center">
+    <img alt="getFoods query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/getFoods.png">
+  </p>
+
+  #### getFoodById: this query gets a Food object using it's id
+
+  The following is an example of a getFoodById query:
+
+  <p align="center">
+    <img alt="getFoodbyId query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/getFoodById.png">
+  </p>
+
+  ### **Food - Mutations**
+
+  #### addFood: this mutation inserts a food object into the foods table
+    > Note: It uses the following arguments wrapped in an input object with all being mandatory except for edamam_id
+
+    >foodName: String!
+    caloriesPerServ: Int!
+    fats: Float!
+    carbs: Float!
+    proteins: Float!
+    edamam_id: String
+
+  The following is an example of an addFood mutation
+
+  <p align="center">
+    <img alt="addFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/addFood.png">
+  </p>
+
+  ### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
+
+  It differs in that it has two main argument:
+    1) id
+    2) input object - The same input from addFood
+
+  The following is an example of an updateFood mutation  
+
+  <p align="center">
+    <img alt="updateFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/updateFood.png">
+  </p>
+
+  #### deleteFood: this mutation deletes a food object from the API
+
+  It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
+
+  The following is an example of a deleteFood mutation:
+
+  <p align="center">
+    <img alt="updateFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/deleteFood.png">
+  </p>
