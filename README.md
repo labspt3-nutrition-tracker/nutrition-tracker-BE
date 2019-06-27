@@ -8,17 +8,18 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 #### Covered Use Cases
 
   * Creating, Updating, Reading
-    * Users
+    * users
   * Full CRUD functionality for
-    * Food
-    * FoodEntry
-    * MealCategory
-    * Messages
-    * ExerciseEntry
-    * Weight
+    * foods
+    * foodEntries
+    * messages
+    * exerciseEntries
+    * weightentries
   * Create, Read, and Delete
-    * Coaches
-    * Stripe Subscriptions
+    * coaches
+    * billing
+  * Read functionality for
+    * mealCategories
 
  > Using the API for the front end requires a check using Google's  Oauth2 Client API. This would check against the user info and would result in an active token to be used in the headers
 
@@ -218,3 +219,19 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   <p align="center">
     <img alt="deleteFood mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/FoodImages/deleteFood.png">
   </p>
+
+  ## Meal Category Model
+    Due to executive decisions, we've decided remove update, edit, and delete of meal categories in order to simplify meals into 4 categories.
+
+    > 1) id: 1, mealCategoryName: Breakfast
+    > 2) id: 2, mealCategoryName: Lunch
+    > 3) id: 3, mealCategoryName: Snack
+    > 4) id: 4, mealCategoryName: Dinner
+    
+    The following are the data that can be returned in Meal Category Model Queries:
+
+    > * id
+    > * mealCategoryName
+    > * foodEntries -uses foodEntry Model
+
+    ### **Meal Category - Queries**
