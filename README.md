@@ -185,7 +185,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   #### addFood: this mutation inserts a food object into the foods table
 
-    >  Note: It uses the following arguments wrapped in an input object with all being mandatory except for edamam_id
+  > Note: It uses the following arguments wrapped in an input object with all being mandatory except for edamam_id
 
       foodName: String!
       caloriesPerServ: Int!
