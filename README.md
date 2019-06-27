@@ -300,7 +300,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ### **Food Entry - Mutations**  
 
-#### addFoodEntry: this mutation inserts a food object into the foods table
+#### addFoodEntry: this mutation inserts a food entry object into the foodEntries table
 
 > Note: It uses the following arguments wrapped in an input object with all being mandatory
 
@@ -383,3 +383,12 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 
 ### **Exercise Entry - Mutations**
+
+#### addExerciseEntry: this mutation inserts an exercise object into the exerciseEntries table
+
+> Note: It uses the following arguments wrapped in an input object with all being mandatory
+
+    exerciseEntryDate: Date!
+    exerciseName: String!
+    caloriesBurned: Int!
+    exercise_entry_user_id: ID!
