@@ -490,6 +490,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
   The following are the data that can be returned in Exercise Model Queries:  
 
+> Note: The coaches model uses the User model for both its coach and trainee data. It's a purely relational table. 
+
   * id
   * foodName
   * caloriesPerServ
