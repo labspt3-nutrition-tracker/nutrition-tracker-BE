@@ -307,8 +307,8 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 > Note: It uses the following arguments wrapped in an input object with all being mandatory
 
-  date: Date!
-  food_id: ID!
-  user_id: ID!
-  servingQty: Int!
-  meal_category_id: ID!
+      date: Date!
+      food_id: ID!
+      user_id: ID!
+      servingQty: Int!
+      meal_category_id: ID!
