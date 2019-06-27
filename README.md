@@ -221,6 +221,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
   ## Meal Category Model
+
     Due to executive decisions, we've decided remove update, edit, and delete of meal categories in order to simplify meals into 4 categories.
 
     >  1) id: 1, mealCategoryName: Breakfast
@@ -228,11 +229,16 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     >  3) id: 3, mealCategoryName: Snack
     >  4) id: 4, mealCategoryName: Dinner
 
+
+
     The following are the data that can be returned in Meal Category Model Queries:
+
+
 
     >  * id
     >  * mealCategoryName
     >  * foodEntries -uses foodEntry Model
+
 
 
   ### **Meal Category - Queries**
