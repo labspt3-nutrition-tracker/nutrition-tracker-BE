@@ -384,7 +384,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ### **Exercise Entry - Mutations**
 
-#### addExerciseEntry: this mutation inserts an exercise object into the exerciseEntries table
+#### addExerciseEntry: this mutation inserts an exercise entry object into the exerciseEntries table
 
 > Note: It uses the following arguments wrapped in an input object with all being mandatory
 
@@ -392,3 +392,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     exerciseName: String!
     caloriesBurned: Int!
     exercise_entry_user_id: ID!
+
+    The following is an example of an addExerciseEntry mutation
+
+    <p align="center">
+      <img alt="addExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/addExerciseEntry.png">
+    </p>
