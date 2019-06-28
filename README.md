@@ -510,7 +510,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 The following is an example of a getTrainees query:
 
 <p align="center">
-  <img alt="getTrainees" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getTrainees.png"
+  <img alt="getTrainees query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getTrainees.png"
 </p>
 
 #### getCoaches: this query uses a trainee_id as an argument in order to get a list of that trainee's coach(es).
@@ -518,5 +518,25 @@ The following is an example of a getTrainees query:
 The following is an example of a getCoaches query:
 
 <p align="center">
-  <img alt="getCoaches" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getcoaches.png"
+  <img alt="getCoaches query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getcoaches.png"
+</p>
+
+### **Coaches - Mutation**
+
+> Note: As the coaches table is a relational table, it's arguments are coach_id and trainee_id only. The result of both the addTrainees and deleteTrainees are the same data coming off a user model.
+
+#### addTrainees: this mutation uses coach_id and trainee_id in that order in order to add a trainee to the coach's list of trainees.
+
+The following is an example of an addTrainees mutation:
+
+<p align="center">
+  <img alt="addTrainees mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/addTrainees.png"
+</p>
+
+#### deleteTrainees: this mutation uses coach_id and trainee_id in that order in order to delete that trainee from the coach's list of trainees.
+
+The following is an example of an deleteTrainees mutation:
+
+<p align="center">
+  <img alt="deleteTrainees mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/deleteTrainees.png"
 </p>
