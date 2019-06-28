@@ -38,15 +38,15 @@ This API covers all key use cases related to the nutrition tracker. The API uses
 
 As of now, using Nutrition Tracker API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
 
-## Lambda Perpetual Access Fund
+## [Lambda Perpetual Access Fund](https://lambdapaf.org/)
 
 Whether you use this project, have learned something from it, or just like it, please consider supporting it by donating to Lambda School's Perpetual Access Funds. This fund is used to provide student who have financial needs be able to continue their journey in [Lambda School](https://lambdaschool.com/)
 
 Every dollar you donate to the Fund will be used to help someone create a new life for themselves. We hope you'll join us in helping students who need it most.
 
+> note: click on the image below to donate: 
 
-
-[![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/) <--- Click here to donate
+[![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/)
 
 #### Covered Use Cases
 
