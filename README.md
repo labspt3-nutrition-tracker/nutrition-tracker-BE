@@ -502,3 +502,13 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   * proteins
   * edamam_id
   * foodEntries - uses foodEntries model
+
+### **Coaches - Queries**  
+
+#### getTrainees: this query uses a coach_id as an argument in order to get a list of that coach's trainees.
+
+The following is an example of a getTrainees query:
+
+<p align="center">
+  <img alt="getTrainees" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getTrainees.png"
+</p>
