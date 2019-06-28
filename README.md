@@ -46,8 +46,10 @@ Every dollar you donate to the Fund will be used to help someone create a new li
 
 <div align="center">
   <img alt="getUsers query"
-  src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png"?
+  src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png"
 </div>
+
+
 
 #### Covered Use Cases
 
