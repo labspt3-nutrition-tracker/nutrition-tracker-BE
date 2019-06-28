@@ -29,6 +29,7 @@
 * [Messages Model](#Messages-Model)
     * [Messages Queries](#Messages---Queries)
     * [Messages Mutations](#Messages---Mutations)
+* [License](#License)
 
 
 ## Nutrition Tracker API
@@ -668,3 +669,9 @@ The following is an example of an addMessage mutation
   <p align="center">
     <img alt="deleteMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
   </p>
+
+## License
+
+> You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/master/LICENSE)
+
+This project is licensed under the terms of the MIT license
