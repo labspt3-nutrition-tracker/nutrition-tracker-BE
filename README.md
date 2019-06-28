@@ -14,6 +14,18 @@
 * [Food Entry Model](#Food-Entry-Model)
     * [Food Entry Queries](#Food-Entry---Queries)
     * [Food Entry Mutations](#Food-Entry---Mutations)
+* [Exercise Entry Model](#Exercise-Entry-Model)
+    * [Exercise Entry Queries](#Exercise-Entry---Queries)
+    * [Exercise Entry Mutations](#Exercise-Entry---Mutations)
+* [Weight Entry Model](#Weight-Entry-Model)
+    * [Weight Entry Queries](#Weight-Entry---Queries)
+    * [Weight Entry Mutations](#Weight-Entry---Mutations)
+* [Coaches Model](#Coaches-Model)
+    * [Coaches Queries](#Coaches---Queries)
+    * [Coaches Mutations](#Coaches---Mutations)
+* [Messages Model](#Messages-Model)
+    * [Messages Queries](#Messages---Queries)
+    * [Messages Mutations](#Messages---Mutations)
 
 
 ## Nutrition Tracker API
@@ -444,7 +456,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     <img alt="deleteExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/deleteExerciseEntry.png">
   </p>
 
-## WeightEntry Model
+## Weight Entry Model
 
 ### **Weight Entry - Queries**
 
@@ -544,7 +556,7 @@ The following is an example of a getCoaches query:
   <img alt="getCoaches query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getcoaches.png"
 </p>
 
-### **Coaches - Mutation**
+### **Coaches - Mutations**
 
 > Note: As the coaches table is a relational table, it's arguments are coach_id and trainee_id only. The result of both the addTrainees and deleteTrainees are the same data coming off a user model.
 
@@ -566,7 +578,7 @@ The following is an example of an deleteTrainees mutation:
 
 ## Messages Model
 
-### **Message - Queries**
+### **Messages - Queries**
 
 The following are the data that can be returned in Messages Model Queries:
 
@@ -586,7 +598,7 @@ The following is an example of an getMessagesBy query:
   <img alt="getMessagesBy query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/getMessageBy.png"
 </p>
 
-### **Message - Mutations**
+### **Messages - Mutations**
 
 #### addMessage: this mutation inserts an message object into the messages table
 
