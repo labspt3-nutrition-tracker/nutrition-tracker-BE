@@ -512,3 +512,11 @@ The following is an example of a getTrainees query:
 <p align="center">
   <img alt="getTrainees" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getTrainees.png"
 </p>
+
+#### getCoaches: this query uses a trainee_id as an argument in order to get a list of that trainee's coach(es).
+
+The following is an example of a getCoaches query:
+
+<p align="center">
+  <img alt="getCoaches" query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/getcoaches.png"
+</p>
