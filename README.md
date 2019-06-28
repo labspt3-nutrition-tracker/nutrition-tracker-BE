@@ -415,7 +415,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   The following is an example of an updateExerciseEntry mutation  
 
   <p align="center">
-    <img alt="updateExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/updateExerciseEntry.png">
+    <img alt="updateExerciseEntry mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/ExerciseEntryImages/updateExercise.png">
   </p>
 
 #### deleteExerciseEntry: this mutation deletes an exercise entry object from the API
