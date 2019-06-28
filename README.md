@@ -44,7 +44,9 @@ Whether you use this project, have learned something from it, or just like it, p
 
 Every dollar you donate to the Fund will be used to help someone create a new life for themselves. We hope you'll join us in helping students who need it most.
 
-[![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/)
+
+
+[![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/) <--- Click here to donate
 
 #### Covered Use Cases
 
