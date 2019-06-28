@@ -3,6 +3,7 @@
 ## Table of Contents
 
 * [Nutrition Tracker API](#Nutrition-Tracker-API)
+* [Covered Used Cases](#Covered-Use-Cases)
 * [User Model](#User-Model)
     * [User Queries](#User---Queries)
     * [User Mutations](#User---Mutations)
@@ -587,7 +588,7 @@ The following are the data that can be returned in Messages Model Queries:
   * read: Boolean!
   * sender: User!
   * recipient: User!
-  
+
 ### **Messages - Queries**
 
 #### getMessagesBy: this query uses two arguments to query message(s) based on the param (the table columns), and the value: the value of the column. It returns objects that matches the param: value
