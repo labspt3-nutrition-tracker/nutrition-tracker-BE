@@ -9,6 +9,11 @@
 * [Food Model](#Food-Model)
     * [Food Queries](#Food---Queries)
     * [Food Mutations](#Food---Mutations)
+* [Meal Category Model](#Meal-Category-Model)
+    * [Meal Category Queries](#Meal-Category---Queries)
+* [Food Entry Model](#Food-Entry-Model)
+    * [Food Entry Queries](#Food-Entry---Queries)
+    * [Food Entry Mutations](#Food-Entry---Mutations)
 
 
 ## Nutrition Tracker API
@@ -281,7 +286,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MealCategoryImages/getMealCategoryById.png"
   </p>
 
-## FoodEntry Model
+## Food Entry Model
 
   The following are the data that can be returned in FoodEntry Model Queries:
 
