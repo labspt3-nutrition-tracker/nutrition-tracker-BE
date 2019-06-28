@@ -554,3 +554,11 @@ The following are the data that can be returned in Messages Model Queries:
   * read: Boolean!
   * sender: User!
   * recipient: User!
+
+#### getMessagesBy: this query uses two arguments to query message(s) based on the param (the table columns), and the value: the value of the column. It returns objects that matches the param: value
+
+The following is an example of an getMessagesBy query:
+
+<p align="center">
+  <img alt="getMessagesBy query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/getMessageBy.png"
+</p>
