@@ -547,10 +547,10 @@ The following is an example of an deleteTrainees mutation:
 
 The following are the data that can be returned in Messages Model Queries:
 
-    * id: ID!
-    * created_at: Date!
-    * type: String!
-    * text: String!
-    * read: Boolean!
-    * sender: User!
-    * recipient: User!
+  * id: ID!
+  * created_at: Date!
+  * type: String!
+  * text: String!
+  * read: Boolean!
+  * sender: User!
+  * recipient: User!
