@@ -128,6 +128,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 #### updateUser: this mutation edits an existing user entry in the API. Like the addUser, it requires the same mandatory arguments. Only weight is optional
 
   It differs in that it has two main argument:
+
     1) id
     2) input object - The same input from addUser
 
@@ -202,6 +203,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 #### updateFood: this mutation edits an existing food object entry using two arguments. Like addFood, it uses the same mandatory arguments.
 
   It differs in that it has two main argument:
+
     1) id
     2) input object - The same input from addFood
 
@@ -248,6 +250,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
 #### getMealCategoryBy: this query uses two arguments to check the API for a mealCategory that has that specific param - value match.
+
     1) param: a column from the User model
     2) value: a String value
 
@@ -320,6 +323,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 #### updateFoodEntry: this mutation edits an existing food entry object entry using two arguments. Like addFoodEntry, it uses the same mandatory arguments in input.
 
   It differs in that it has two main argument:
+
     1) id
     2) input object - The same input from addFoodEntry
 
@@ -362,6 +366,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   </p>
 
 #### getExerciseEntryBy: this query uses two arguments to check the API for an exercise entry that has that specific param - value match.
+
     1) param: a column from the exercise entry model
     2) value: a String value
 
@@ -403,6 +408,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 #### updateExerciseEntry: this mutation edits an existing exercise entry object entry using two arguments. Like addExerciseEntry, it uses the same mandatory arguments in input.
 
   It differs in that it has two main argument:
+
     1) id
     2) input object - The same input from addExerciseEntry
 
@@ -563,3 +569,45 @@ The following is an example of an getMessagesBy query:
 <p align="center">
   <img alt="getMessagesBy query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/getMessageBy.png"
 </p>
+
+### **Message - Mutations**
+
+#### addMessage: this mutation inserts an message object into the messages table
+
+> Note: It uses the following arguments wrapped in an input object with all being mandatory
+
+      type: String!
+      text: String!
+      read: Boolean!
+      sender: ID!
+      recipient: ID!
+
+The following is an example of an addMessage mutation
+
+<p align="center">
+  <img alt="addMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/addMessage.png">
+</p>
+
+
+#### updateMessage: this mutation edits an existing message entry object entry using two arguments. Like addMessage, it uses the same mandatory arguments in input.
+
+  It differs in that it has two main argument:
+
+      1) id
+      2) input object - The same input from addMessage mutation
+
+  The following is an example of an updateMessage mutation  
+
+  <p align="center">
+    <img alt="updateMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/updateMessage.png">
+  </p>
+
+#### deleteMessage: this mutation deletes an message object from the API
+
+  It contains only the id argument and requires no output as it returns a 1 for successful deletion and  0 for unsuccessful deletions.
+
+  The following is an example of a deleteMessage mutation:
+
+  <p align="center">
+    <img alt="deleteMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
+  </p>
