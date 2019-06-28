@@ -98,6 +98,8 @@ Or to use an already existing API to get started:
   > * stripe_id
   > * trainees
 
+  >Note: There are 3 userType: basic, premium, coach 
+
 
 ### **User - Queries**
 
