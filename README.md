@@ -469,6 +469,7 @@ The following are the data that can be returned in weightEntry Model Queries:
 #### updateWeightEntry: this mutation edits an existing weight entry object entry using two arguments. Like addWeightEntry, it uses the same mandatory arguments in input.
 
   It differs in that it has two main argument:
+
       1) id
       2) input object - The same input from addWeightEntry
 
