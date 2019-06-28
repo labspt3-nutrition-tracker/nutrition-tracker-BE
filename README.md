@@ -426,7 +426,7 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ### **Weight Entry - Queries**
 
-  The following are the data that can be returned in weightEntry Model Queries:
+The following are the data that can be returned in weightEntry Model Queries:
 
    * id  
    * date
@@ -490,7 +490,9 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ## Coaches Model
 
-  The following are the data that can be returned in Exercise Model Queries:  
+### **Coaches - Queries**
+
+The following are the data that can be returned in Exercise Model Queries:  
 
 > Note: The coaches model uses the User model for both its coach and trainee data. It's a purely relational table.
 
@@ -502,8 +504,6 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
   * proteins
   * edamam_id
   * foodEntries - uses foodEntries model
-
-### **Coaches - Queries**  
 
 #### getTrainees: this query uses a coach_id as an argument in order to get a list of that coach's trainees.
 
@@ -540,3 +540,17 @@ The following is an example of an deleteTrainees mutation:
 <p align="center">
   <img alt="deleteTrainees mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/CoachesImages/deleteTrainees.png"
 </p>
+
+## Messages Model
+
+### **Message - Queries**
+
+The following are the data that can be returned in Messages Model Queries:
+
+    * id: ID!
+    * created_at: Date!
+    * type: String!
+    * text: String!
+    * read: Boolean!
+    * sender: User!
+    * recipient: User!
