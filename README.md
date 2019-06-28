@@ -3,6 +3,7 @@
 ## Table of Contents
 
 * [Nutrition Tracker API](#Nutrition-Tracker-API)
+* [Lambda Perpetual Access Fund](#Lambda-Perpetual-Access-Fund)
 * [Covered Use Cases](#Covered-Use-Cases)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
@@ -36,6 +37,17 @@
 This API covers all key use cases related to the nutrition tracker. The API uses [Graph QL](https://graphql.org/) which is a query language for APIs and it gives users the ability to query exactly what is needed and nothing more.
 
 As of now, using Nutrition Tracker API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
+
+## Lambda Perpetual Access Fund
+
+Whether you use this project, have learned something from it, or just like it, please consider supporting it by donating to Lambda School's Perpetual Access Funds. This fund is used to provide student who have financial needs be able to continue their journey in [Lambda School](https://lambdaschool.com/)
+
+Every dollar you donate to the Fund will be used to help someone create a new life for themselves. We hope you'll join us in helping students who need it most.
+
+<p align="center">
+  <img alt="getUsers query"
+  src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/getUsers.png"?
+</p>
 
 #### Covered Use Cases
 
@@ -98,7 +110,7 @@ Or to use an already existing API to get started:
   > * stripe_id
   > * trainees
 
-  >Note: There are 3 userType: basic, premium, coach 
+  >Note: There are 3 userType: basic, premium, coach
 
 
 ### **User - Queries**
