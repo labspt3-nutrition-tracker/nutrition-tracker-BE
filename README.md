@@ -458,14 +458,14 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
 
 ## Weight Entry Model
 
-### **Weight Entry - Queries**
-
 The following are the data that can be returned in weightEntry Model Queries:
 
    * id  
    * date
    * weight
    * user_id - This uses the user model data
+
+### **Weight Entry - Queries**
 
 #### getWeightEntries: this query returns every weight entries from the API
 
@@ -525,8 +525,6 @@ The following are the data that can be returned in weightEntry Model Queries:
 
 ## Coaches Model
 
-### **Coaches - Queries**
-
 The following are the data that can be returned in Exercise Model Queries:  
 
 > Note: The coaches model uses the User model for both its coach and trainee data. It's a purely relational table.
@@ -539,6 +537,8 @@ The following are the data that can be returned in Exercise Model Queries:
   * proteins
   * edamam_id
   * foodEntries - uses foodEntries model
+
+### **Coaches - Queries**
 
 #### getTrainees: this query uses a coach_id as an argument in order to get a list of that coach's trainees.
 
@@ -578,8 +578,6 @@ The following is an example of an deleteTrainees mutation:
 
 ## Messages Model
 
-### **Messages - Queries**
-
 The following are the data that can be returned in Messages Model Queries:
 
   * id: ID!
@@ -589,6 +587,8 @@ The following are the data that can be returned in Messages Model Queries:
   * read: Boolean!
   * sender: User!
   * recipient: User!
+  
+### **Messages - Queries**
 
 #### getMessagesBy: this query uses two arguments to query message(s) based on the param (the table columns), and the value: the value of the column. It returns objects that matches the param: value
 
