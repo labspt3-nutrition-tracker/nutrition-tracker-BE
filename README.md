@@ -3,7 +3,9 @@
 ## Table of Contents
 
 * [Nutrition Tracker API](#Nutrition-Tracker-API)
-* [Covered Used Cases](#Covered-Use-Cases)
+* [Covered Use Cases](#Covered-Use-Cases)
+* [Technologies](#Technologies)
+* [Setup](#Setup)
 * [User Model](#User-Model)
     * [User Queries](#User---Queries)
     * [User Mutations](#User---Mutations)
@@ -51,6 +53,32 @@ As of now, using Nutrition Tracker API can only be used in conjunction with [Goo
     * mealCategories
 
  > Using the API for the front end requires a check using Google's  Oauth2 Client API. This would check against the user info and would result in an active token to be used in the headers
+
+## Technologies
+
+Project is created with:
+  * Apollo Server version: 2.5.0
+  * dotenv version: 8.0.0
+  * google-auth-library version: 4.0.0
+  * graphql version: 14.3.0
+  * graphql-merge-resolvers version: 1.1.10
+  * knex version: 0.17.6
+  * pg version: 7.11.0
+  * sqlite3 version: 4.0.8
+  * strip version: 7.1.0
+
+## Setup
+
+To run this project, install it locally using yarn:
+
+    $ cd nutrition-tracker-BE/
+    $ yarn install
+    $ yarn start
+
+Or to use an already existing API to get started:
+
+[Nutrition Tracker](https://nutrition-tracker-be.herokuapp.com/)
+
 
 ## User Model
 
