@@ -24,12 +24,16 @@ module.exports = {
         ...args.input
       };
       const addedMessage = await Message.add(newMessage);
-      console.log({addedMessage})
       return addedMessage;
     },
     deleteMessage: async (root, { id }, ctx) => {
       const deleteMessage = await Message.remove(id);
       return deleteMessage;
+    },
+    updateMessage: async (root, args, ctx) => {
+      const { id, input } = args;
+      const message = await Message.edit(id, input);
+      return message;
     }
   }
 };
