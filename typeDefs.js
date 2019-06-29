@@ -10,7 +10,7 @@ module.exports = gql`
     #//*Food
     getFoods: [Food!]!
     getFoodById(foodId: ID!): Food!
-    getFoodBy(param: String!, value: String!): Food!
+    getFoodBy(param: String!, value: String!): [Food]!
 
     #//*MealCategory
     getMealCategories: [MealCategory!]!
@@ -37,7 +37,6 @@ module.exports = gql`
     #//* Billing
     getBillingHistory(id: ID!): [Billing!]
     getRecentBilling(id: ID!): Billing!
-
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
