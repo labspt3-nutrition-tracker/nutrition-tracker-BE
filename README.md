@@ -1,4 +1,4 @@
-# HelloMelon Backend Documentation
+# HelloMelon Backend ReadME and Documentation
 
 ## Table of Contents
 
@@ -695,6 +695,6 @@ The following is an example of an addMessage mutation
 
 ## License
 
-> You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/master/LICENSE)
+> You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-FE/blob/david-chua/client/LICENSE)
 
 This project is licensed under the terms of the MIT license
