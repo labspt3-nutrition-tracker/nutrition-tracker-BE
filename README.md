@@ -1,8 +1,8 @@
-# Nutrition Tracker Backend Documentation
+# HelloMelon Backend Documentation
 
 ## Table of Contents
 
-* [Nutrition Tracker API](#Nutrition-Tracker-API)
+* [HelloMelon API](#HelloMelon-API)
 * [Lambda Perpetual Access Fund](#Lambda-Perpetual-Access-Fund)
 * [Covered Use Cases](#Covered-Use-Cases)
 * [Technologies](#Technologies)
@@ -33,10 +33,10 @@
 * [License](#License)
 
 
-## Nutrition Tracker API
-This API covers all key use cases related to the nutrition tracker. The API uses [Graph QL](https://graphql.org/) which is a query language for APIs and it gives users the ability to query exactly what is needed and nothing more.
+## HelloMelon API
+This API covers all key use cases related to the HelloMelon. The API uses [Graph QL](https://graphql.org/) which is a query language for APIs and it gives users the ability to query exactly what is needed and nothing more.
 
-As of now, using Nutrition Tracker API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
+As of now, using HelloMelonr API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
 
 ## [Lambda Perpetual Access Fund](https://lambdapaf.org/)
 
@@ -89,7 +89,7 @@ To run this project, install it locally using yarn:
 
 Or to use an already existing API to get started:
 
-[Nutrition Tracker](https://nutrition-tracker-be.herokuapp.com/)
+[HelloMelon](https://nutrition-tracker-be.herokuapp.com/)
 
 
 ## User Model
