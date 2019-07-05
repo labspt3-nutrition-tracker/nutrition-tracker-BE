@@ -4,6 +4,7 @@
 
 * [HelloMelon API](#HelloMelon-API)
 * [Lambda Perpetual Access Fund](#Lambda-Perpetual-Access-Fund)
+* [Authors](#Authors)
 * [Covered Use Cases](#Covered-Use-Cases)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
@@ -47,6 +48,15 @@ Every dollar you donate to the Fund will be used to help someone create a new li
 > note: click on the image below to donate:
 
 [![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/)
+
+## Authors
+
+* [Alando Appling](https://github.com/Landoooooo)
+* [Christene Bennett](https://github.com/christenebennett)
+* [Leila Berrouayel](https://github.com/leila100)
+* [David Chua](https://github.com/david-chua)
+* [Jamar Torres](https://github.com/jrizza88)
+* [Christopher Ferrell](https://github.com/cferrell2)
 
 ## Covered Use Cases
 
