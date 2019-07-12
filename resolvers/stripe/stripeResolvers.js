@@ -50,10 +50,10 @@ module.exports = {
                 }
 
                 console.log("create",billingInfo)
-
+                console.log(user)
                 await Billing.add(billingInfo)
                 const newUser = await User.edit(user.id, user);
-
+                console.log(newUser)
                 return newUser;
             }else{
 
@@ -69,6 +69,7 @@ module.exports = {
                     userType: "coach"
                 }
 
+
                 const billingInfo = {
                     date: moment().format('ddd MMMM D YYYY'),
                     user_id: user.id,
@@ -82,7 +83,7 @@ module.exports = {
 
                 console.log("user info", user)
                 const newUser = await User.edit(user.id, user);
-
+                console.log(newUser)
                 return newUser;
             }
         }
