@@ -50,12 +50,10 @@ module.exports = {
                 }
 
                 console.log("create",billingInfo)
-                console.log("userStripe", user)
 
                 await Billing.add(billingInfo)
-
                 const newUser = await User.edit(user.id, user);
-                console.log("user", newUser)
+
                 return newUser;
             }else{
 
@@ -79,11 +77,12 @@ module.exports = {
                 }
 
                 console.log("create",billingInfo)
-                console.log("userStripe", user)
 
                 await Billing.add(billingInfo)
+
+                console.log("user info", user)
                 const newUser = await User.edit(user.id, user);
-                console.log("user", newUser)
+
                 return newUser;
             }
         }
