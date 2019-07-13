@@ -1,9 +1,10 @@
-# Nutrition Tracker Backend Documentation
+# HelloMelon Backend ReadME and Documentation
 
 ## Table of Contents
 
-* [Nutrition Tracker API](#Nutrition-Tracker-API)
+* [HelloMelon API](#HelloMelon-API)
 * [Lambda Perpetual Access Fund](#Lambda-Perpetual-Access-Fund)
+* [Authors](#Authors)
 * [Covered Use Cases](#Covered-Use-Cases)
 * [Technologies](#Technologies)
 * [Setup](#Setup)
@@ -33,10 +34,10 @@
 * [License](#License)
 
 
-## Nutrition Tracker API
-This API covers all key use cases related to the nutrition tracker. The API uses [Graph QL](https://graphql.org/) which is a query language for APIs and it gives users the ability to query exactly what is needed and nothing more.
+## HelloMelon API
+This API covers all key use cases related to the HelloMelon. The API uses [Graph QL](https://graphql.org/) which is a query language for APIs and it gives users the ability to query exactly what is needed and nothing more.
 
-As of now, using Nutrition Tracker API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
+As of now, using HelloMelonr API can only be used in conjunction with [Google's Oauth2 API](https://developers.google.com/identity/protocols/OAuth2) as it is used to check for a verified and active Token upon logging in for the front end.
 
 ## [Lambda Perpetual Access Fund](https://lambdapaf.org/)
 
@@ -47,6 +48,15 @@ Every dollar you donate to the Fund will be used to help someone create a new li
 > note: click on the image below to donate:
 
 [![button](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/Lambda%20School.png)](https://lambdapaf.org/)
+
+## Authors
+
+* [Alando Appling](https://github.com/Landoooooo)
+* [Christene Bennett](https://github.com/christenebennett)
+* [Leila Berrouayel](https://github.com/leila100)
+* [David Chua](https://github.com/david-chua)
+* [Jamar Torres](https://github.com/jrizza88)
+* [Christopher Ferrell](https://github.com/cferrell2)
 
 ## Covered Use Cases
 
@@ -89,7 +99,7 @@ To run this project, install it locally using yarn:
 
 Or to use an already existing API to get started:
 
-[Nutrition Tracker](https://nutrition-tracker-be.herokuapp.com/)
+[HelloMelon](https://nutrition-tracker-be.herokuapp.com/)
 
 
 ## User Model
@@ -685,6 +695,6 @@ The following is an example of an addMessage mutation
 
 ## License
 
-> You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/master/LICENSE)
+> You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-FE/blob/david-chua/client/LICENSE)
 
 This project is licensed under the terms of the MIT license
