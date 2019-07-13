@@ -50,11 +50,11 @@ module.exports = {
                 }
 
                 console.log("create",billingInfo)
-
+                console.log(user)
                 await Billing.add(billingInfo)
-                await User.edit(user.id, user);
-
-                return user;
+                const newUser = await User.edit(user.id, user);
+                console.log(newUser)
+                return newUser;
             }else{
 
                 const customer = await stripe.customers.create({
@@ -69,6 +69,7 @@ module.exports = {
                     userType: "coach"
                 }
 
+
                 const billingInfo = {
                     date: moment().format('ddd MMMM D YYYY'),
                     user_id: user.id,
@@ -79,9 +80,11 @@ module.exports = {
                 console.log("create",billingInfo)
 
                 await Billing.add(billingInfo)
-                await User.edit(user.id, user);
 
-                return user;
+                console.log("user info", user)
+                const newUser = await User.edit(user.id, user);
+                console.log(newUser)
+                return newUser;
             }
         }
     }
