@@ -36,7 +36,7 @@ module.exports = gql`
 
     #//* Billing
     getBillingHistory(id: ID!): [Billing!]
-    getRecentBilling(id: ID!): Billing!
+    getRecentBilling(id: ID!): Billing
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
