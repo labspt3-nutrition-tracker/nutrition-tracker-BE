@@ -101,8 +101,9 @@ module.exports = {
             const billingInfo = await Billing.findLastById(id)
             const { date } = billingInfo;
 
-            const today = moment().format('ddd MMMM D YYYY');
-            if(today.diff(date, 'days') > 30){
+            const momentDate = moment(date).format('ddd MMMM D YYYY');
+            const today = moment();
+            if(today.diff(momentDate, 'days') > 30){
                 const newUser = await User.edit(id, user)
 
                 return newUser;
