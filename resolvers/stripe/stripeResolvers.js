@@ -17,6 +17,8 @@ module.exports = {
             const { id } = args;
             const billingInfo = await Billing.findLastById(id)
 
+
+
             return billingInfo;
         }
 
@@ -49,11 +51,9 @@ module.exports = {
                     amount_paid: 700
                 }
 
-                console.log("create",billingInfo)
-                console.log(user)
                 await Billing.add(billingInfo)
                 const newUser = await User.edit(user.id, user);
-                console.log(newUser)
+
                 return newUser;
             }else{
 
@@ -84,6 +84,27 @@ module.exports = {
                 console.log("user info", user)
                 const newUser = await User.edit(user.id, user);
                 console.log(newUser)
+                return newUser;
+            }
+        },
+
+        updateUserType: async (root, args, ctx) => {
+            const id = args.id;
+
+            let user = await User.findBy({"id": id});
+
+            user = {
+                ...user[0],
+                userType: "basic"
+            }
+
+            const billingInfo = await Billing.findLastById(id)
+            const { date } = billingInfo;
+
+            const today = moment().format('ddd MMMM D YYYY');
+            if(today.diff(date, 'days') > 30){
+                const newUser = await User.edit(id, user)
+
                 return newUser;
             }
         }
