@@ -51,6 +51,7 @@ module.exports = {
                     amount_paid: 700
                 }
 
+                console.log("create",billingInfo)
                 await Billing.add(billingInfo)
                 const newUser = await User.edit(user.id, user);
 
