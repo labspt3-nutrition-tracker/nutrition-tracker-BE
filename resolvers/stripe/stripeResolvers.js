@@ -51,10 +51,11 @@ module.exports = {
                     amount_paid: 700
                 }
 
-                console.log("create",billingInfo)
+                console.log("create",user)
+
                 await Billing.add(billingInfo)
                 const newUser = await User.edit(user.id, user);
-
+                console.log(newUser)
                 return newUser;
             }else{
 
@@ -78,7 +79,7 @@ module.exports = {
                     amount_paid: 1000
                 }
 
-                console.log("create",billingInfo)
+                console.log("create",user)
 
                 await Billing.add(billingInfo)
 
