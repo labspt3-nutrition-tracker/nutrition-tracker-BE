@@ -32,11 +32,10 @@ async function add(user) {
 async function edit(id, changes) {
 
   console.log("info", changes)
-  const test = await db("users")
+  await db("users")
     .where("id", id)
     .update(changes);
 
-  console.log("userModel", test)
 
   return findById(id);
 }
