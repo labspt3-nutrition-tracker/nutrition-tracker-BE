@@ -19,15 +19,6 @@ module.exports = {
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
-    pool: {
-      afterCreate: function(connection, done) {
-        connection.query('SET timezone="EST";', function(err) {
-          if (err) {
-            done(err, connection)
-          } 
-        })
-      }
-    },
     migrations: {
       directory: './data/migrations'
     },
