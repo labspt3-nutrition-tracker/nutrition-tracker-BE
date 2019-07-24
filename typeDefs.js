@@ -105,7 +105,6 @@ module.exports = gql`
     id: ID!
     firstName: String!
     lastName: String!
-    username: String!
     email: String!
     userType: String!
     calorieGoal: Int!
@@ -208,7 +207,6 @@ module.exports = gql`
   input UserInput {
     firstName: String!
     lastName: String!
-    username: String!
     email: String!
     userType: String!
     calorieGoal: Int!
