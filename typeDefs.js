@@ -213,6 +213,7 @@ module.exports = gql`
     userType: String!
     calorieGoal: Int!
     weight: Int
+    stripe_id: String
   }
 
   input FoodCategoryInput {

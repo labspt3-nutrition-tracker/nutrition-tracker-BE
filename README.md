@@ -1,4 +1,4 @@
-# HelloMelon Backend ReadME and Documentation
+# HelloMelon Backend ReadMe and Documentation
 
 ## Table of Contents
 
