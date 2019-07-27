@@ -9,6 +9,10 @@ describe("Environment", () => {
 });
 
 describe("Users", () => {
+  beforeEach(async () => {
+    await db("users").truncate();
+  });
+
   describe("Query: Get current user", () => {
     it("should return message to login, and return null", async () => {
       const response = await request("http://localhost:4000/")
@@ -31,10 +35,6 @@ describe("Users", () => {
   });
 
   describe("Mutation: Add a user", () => {
-    beforeEach(async () => {
-      await db("users").truncate();
-    });
-
     it("should add a new user to the database", async () => {
       const response = await request("http://localhost:4000/")
         .post("/graphql")
@@ -62,7 +62,7 @@ describe("Users", () => {
       expect(response.body.data.addUser.firstName).toBe("Leila");
     });
 
-    it("should sent an error if missing email to add user", async () => {
+    it("should send an error if missing email to add user", async () => {
       const response = await request("http://localhost:4000/")
         .post("/graphql")
         .send({
@@ -79,6 +79,69 @@ describe("Users", () => {
                 firstName
                 lastName
                 email
+              }
+            }
+      `
+        });
+      expect(response.body.errors[0].message).toBe("Field UserInput.email of required type String! was not provided.");
+      expect(response.status).toBe(400);
+    });
+  });
+
+  describe("Mutation: update a user", () => {
+    it("should update a user in the database", async () => {
+      await User.add({
+        firstName: "Leila",
+        lastName: "Berrouayel",
+        email: "nb.leila10@gmail.com",
+        userType: "basic",
+        calorieGoal: 1200,
+        weight: 170
+      });
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              updateUser(input: {
+                firstName: "Leila",
+                lastName: "Berrouayel",
+                email: "nb.leila10@gmail.com",
+                userType: "premium",
+                calorieGoal: 1200,
+                weight: 170
+              }, id: 1) {
+                userType
+              }
+            }
+          `
+        });
+      expect(response.status).toBe(200);
+      expect(response.body.data.updateUser.userType).toBe("premium");
+    });
+
+    it("should send an error if missing info to update user", async () => {
+      await User.add({
+        firstName: "Leila",
+        lastName: "Berrouayel",
+        email: "nb.leila10@gmail.com",
+        userType: "basic",
+        calorieGoal: 1200,
+        weight: 170
+      });
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              updateUser(input: {
+                firstName: "Leila",
+                lastName: "Berrouayel",
+                userType: "premium",
+                calorieGoal: 1200,
+                weight: 170
+              }, id: 1) {
+                userType
               }
             }
       `
