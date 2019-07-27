@@ -10,7 +10,7 @@ const foodEntryResolver = require("./foodEntry/foodEntry");
 const dateResolver = require("./dateResolvers");
 const weightEntryResolver = require("./weightEntry");
 const messageResolver = require("./messageResolver");
-const coachesResolver = require("./coachesResolvers");
+const coachesResolver = require("./coach/coachesResolvers");
 
 module.exports = GMR.merge([
   userResolver,
