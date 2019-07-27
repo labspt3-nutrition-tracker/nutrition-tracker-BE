@@ -147,6 +147,28 @@ describe("Messages", () => {
       expect(response.status).toBe(200);
       expect(response.body.data.addMessage.id).toBe("1");
     });
+    it("should send an error if missing field like text to add message.", async () => {
+      const response = await request(server)
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              addMessage(input: {
+                type: "text",
+                read: false,
+                sender: 1,
+                recipient: 2
+              }) {
+                id
+              }
+            }
+          `
+        });
+      expect(response.body.errors[0].message).toBe(
+        "Field MessageInput.text of required type String! was not provided."
+      );
+      expect(response.status).toBe(400);
+    });
   });
 
   describe("Mutation: Delete a message", () => {
@@ -187,6 +209,28 @@ describe("Messages", () => {
         });
       expect(response.status).toBe(200);
       expect(response.body.data.updateMessage.read).toBe(true);
+    });
+    it("should send an error if missing field like read to update message.", async () => {
+      const response = await request(server)
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              addMessage(input: {
+                type: "text",
+                text: "Message from inside testing.",
+                sender: 1,
+                recipient: 2
+              }) {
+                id
+              }
+            }
+          `
+        });
+      expect(response.body.errors[0].message).toBe(
+        "Field MessageInput.read of required type Boolean! was not provided."
+      );
+      expect(response.status).toBe(400);
     });
   });
 });
