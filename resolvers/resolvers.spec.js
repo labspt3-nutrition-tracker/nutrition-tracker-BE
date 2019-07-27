@@ -8,76 +8,85 @@ describe("Environment", () => {
   });
 });
 
-describe("Get current user query", () => {
-  it("should return message to login, and return null", async () => {
-    const response = await request("http://localhost:4000/")
-      .post("/graphql")
-      .send({
-        query: `
-        {
-          getCurrentUser {
-            id
-            firstName
-            lastName
-            email
-          }
+describe("Users", () => {
+  describe("Query: Get current user", () => {
+    it("should return message to login, and return null", async () => {
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+      {
+        getCurrentUser {
+          id
+          firstName
+          lastName
+          email
         }
+      }
       `
-      });
-    expect(response.body.errors[0].message).toBe("You must be logged in!");
-    expect(response.body.data.getCurrentUser).toBeNull();
+        });
+      expect(response.body.errors[0].message).toBe("You must be logged in!");
+      expect(response.body.data.getCurrentUser).toBeNull();
+    });
+  });
+
+  describe("Mutation: Add a user", () => {
+    beforeEach(async () => {
+      await db("users").truncate();
+    });
+
+    it("should add a new user to the database", async () => {
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+      mutation {
+        addUser(input: {
+          firstName: "Leila",
+          lastName: "Berrouayel",
+          email: "nb.leila10@gmail.com",
+          userType: "basic",
+          calorieGoal: 1200,
+          weight: 170
+        }) {
+          id
+          firstName
+          lastName
+          email
+        }
+      }
+      `
+        });
+      expect(response.status).toBe(200);
+      expect(response.body.data.addUser.id).toBe("1");
+      expect(response.body.data.addUser.firstName).toBe("Leila");
+    });
+
+    it("should sent an error if missing email to add user", async () => {
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              addUser(input: {
+                firstName: "Leila",
+                lastName: "Berrouayel",
+                userType: "basic",
+                calorieGoal: 1200,
+                weight: 170
+              }) {
+                id
+                firstName
+                lastName
+                email
+              }
+            }
+      `
+        });
+      expect(response.body.errors[0].message).toBe("Field UserInput.email of required type String! was not provided.");
+      expect(response.status).toBe(400);
+    });
   });
 });
 
-describe("Mutation: Add a user", () => {
-  beforeEach(async () => {
-    await db("users").truncate();
-  });
-
-  it("should add a new user to the database", async () => {
-    const response = await request("http://localhost:4000/")
-      .post("/graphql")
-      .send({
-        query: `
-        mutation {
-          addUser(input: {
-            firstName: "Leila",
-            lastName: "Berrouayel",
-            email: "nb.leila10@gmail.com",
-            userType: "basic",
-            calorieGoal: 1200,
-            weight: 170
-          }) {
-            id
-            firstName
-            lastName
-            email
-          }
-        }
-      `
-      });
-    expect(response.status).toBe(200);
-    expect(response.body.data.addUser.id).toBe("1");
-    expect(response.body.data.addUser.firstName).toBe("Leila");
-  });
-});
-// .then(res => console.log("**** response: ", res.body));
-// return request("http://localhost:4000/")
-//   .post("/graphql")
-//   .send({
-//     query: `
-//     {
-//       getUserById(userId: 1) {
-//         id
-//         weight
-//         firstName
-//         lastName
-//         email
-//       }
-//     }
-//   `
-//   })
-//   .expect(200)
-//   .then(res => console.log("**** response: ", res.body.data.getUserById));
-//   });
-// });
+// .then(res => console.log("**** response: ", res.body))
