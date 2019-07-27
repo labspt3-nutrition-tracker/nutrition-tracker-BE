@@ -345,4 +345,55 @@ describe("Food Entries", () => {
       expect(response.body.data.getFoodEntriesByUserId).toHaveLength(0);
     });
   });
+
+  describe("Mutation: Add a food entry", () => {
+    beforeEach(async () => {
+      await db("foodEntries").truncate();
+    });
+
+    it("should add a food entry", async () => {
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              addFoodEntry(input: {
+                date: "07-27-2019",
+                food_id: 1,
+                user_id: 1,
+                servingQty: 2,
+                meal_category_id: 1
+              }) {
+                id
+              }
+            }
+          `
+        });
+      expect(response.status).toBe(200);
+      expect(response.body.data.addFoodEntry.id).toBe("1");
+    });
+
+    it("should send an error if missing servingQty to add food entry.", async () => {
+      const response = await request("http://localhost:4000/")
+        .post("/graphql")
+        .send({
+          query: `
+            mutation {
+              addFoodEntry(input: {
+                date: "07-27-2019",
+                food_id: 1,
+                user_id: 1,
+                meal_category_id: 1
+              }) {
+                id
+              }
+            }
+          `
+        });
+      expect(response.body.errors[0].message).toBe(
+        "Field FoodEntryInput.servingQty of required type Int! was not provided."
+      );
+      expect(response.status).toBe(400);
+    });
+  });
 });
