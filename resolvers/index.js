@@ -7,7 +7,7 @@ const mealCatResolver = require("./mealCategory/mealCategory_resolvers");
 const userResolver = require("./users/usersResolvers");
 const foodEntryResolver = require("./foodEntry/foodEntry");
 const dateResolver = require("./date/dateResolvers");
-const weightEntryResolver = require("./weightEntry");
+const weightEntryResolver = require("./weightEntry/weightEntry");
 const messageResolver = require("./message/messageResolver");
 const coachesResolver = require("./coach/coachesResolvers");
 
