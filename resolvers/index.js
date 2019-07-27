@@ -5,17 +5,15 @@ const exerciseResolver = require("./exerciseEntry/exerciseEntry_resolvers");
 const foodResolver = require("./foods/foodsResolvers");
 const mealCatResolver = require("./mealCategory/mealCategory_resolvers");
 const userResolver = require("./users/usersResolvers");
-const foodCatResolver = require("./foodCategory");
 const foodEntryResolver = require("./foodEntry/foodEntry");
-const dateResolver = require("./dateResolvers");
+const dateResolver = require("./date/dateResolvers");
 const weightEntryResolver = require("./weightEntry");
-const messageResolver = require("./messageResolver");
+const messageResolver = require("./message/messageResolver");
 const coachesResolver = require("./coach/coachesResolvers");
 
 module.exports = GMR.merge([
   userResolver,
   exerciseResolver,
-  foodCatResolver,
   mealCatResolver,
   foodResolver,
   foodEntryResolver,
