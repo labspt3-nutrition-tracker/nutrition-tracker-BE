@@ -87,7 +87,7 @@ module.exports = gql`
 
     #//*Billing
     createSubscription(source: String!, email: String!, amount: Int!): User!
-    updateUserType(id: ID!): User!
+    updateUserType(id: ID!): Int
 
     #//*Messages
     addMessage(input: MessageInput!): Message!
