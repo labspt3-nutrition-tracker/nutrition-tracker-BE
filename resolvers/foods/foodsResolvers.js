@@ -13,7 +13,7 @@ module.exports = {
       return food;
     },
     getFoodBy: async (root, args, ctx) => {
-      const food = await Foods.findBy({ [args.param]: args.value});
+      const food = await Foods.findBy({ [args.param]: args.value });
       return food;
     }
   },
@@ -28,7 +28,6 @@ module.exports = {
   Mutation: {
     addFood: async (root, args, ctx) => {
       const food = await Foods.add(args.input);
-      console.log(food);
       return food;
     },
 

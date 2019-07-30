@@ -1,9 +1,9 @@
 const { AuthenticationError } = require("apollo-server");
 
-const FoodEntry = require("../models/foodEntriesModel");
-const Food = require("../models/foodsModel");
-const MealCategory = require("../models/mealCategoriesModel");
-const User = require("../models/usersModel");
+const FoodEntry = require("../../models/foodEntriesModel");
+const Food = require("../../models/foodsModel");
+const MealCategory = require("../../models/mealCategoriesModel");
+const User = require("../../models/usersModel");
 
 const authenticated = next => (root, args, ctx, info) => {
   if (!ctx.currentUser) {

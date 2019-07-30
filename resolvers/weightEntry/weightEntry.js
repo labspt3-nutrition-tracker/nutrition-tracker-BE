@@ -1,7 +1,7 @@
 const { AuthenticationError } = require("apollo-server");
 
-const WeightEntry = require("../models/weightEntriesModel");
-const User = require("../models/usersModel");
+const WeightEntry = require("../../models/weightEntriesModel");
+const User = require("../../models/usersModel");
 
 const authenticated = next => (root, args, ctx, info) => {
   if (!ctx.currentUser) {

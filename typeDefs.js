@@ -10,7 +10,7 @@ module.exports = gql`
     #//*Food
     getFoods: [Food!]!
     getFoodById(foodId: ID!): Food!
-    getFoodBy(param: String!, value: String!): Food!
+    getFoodBy(param: String!, value: String!): [Food]!
 
     #//*MealCategory
     getMealCategories: [MealCategory!]!
@@ -36,7 +36,7 @@ module.exports = gql`
 
     #//* Billing
     getBillingHistory(id: ID!): [Billing!]
-    getRecentBilling(id: ID!): Billing!
+    getRecentBilling(id: ID!): Billing
 
     #//* Weightentry
     getWeightEntries: [WeightEntry]
@@ -68,7 +68,7 @@ module.exports = gql`
     #//*User
     addUser(input: UserInput!): User!
     deleteUser(id: ID!): Int!
-    updateUser(id: ID!, input: UserInput!): User!
+    updateUser(id: ID!, input: UserInput!): User
 
     #//*FoodCategory
     addFoodCategory(input: FoodCategoryInput!): FoodCategory!
@@ -105,7 +105,6 @@ module.exports = gql`
     id: ID!
     firstName: String!
     lastName: String!
-    username: String!
     email: String!
     userType: String!
     calorieGoal: Int!
@@ -208,11 +207,11 @@ module.exports = gql`
   input UserInput {
     firstName: String!
     lastName: String!
-    username: String!
     email: String!
     userType: String!
     calorieGoal: Int!
     weight: Int
+    stripe_id: String
   }
 
   input FoodCategoryInput {

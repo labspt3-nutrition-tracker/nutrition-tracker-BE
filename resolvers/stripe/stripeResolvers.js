@@ -40,7 +40,7 @@ module.exports = {
 
                 user = {
                     ...user[0],
-                    stripe_id: customer.id,
+                    stripe_id: customer.id.toString(),
                     userType: "premium"
                 }
 
@@ -67,7 +67,7 @@ module.exports = {
 
                 user = {
                     ...user[0],
-                    stripe_id: customer.id,
+                    stripe_id: customer.id.toString(),
                     userType: "coach"
                 }
 
@@ -89,10 +89,10 @@ module.exports = {
         updateUserType: async (root, args, ctx) => {
             const id = args.id;
 
-            let user = await User.findBy({"id": id});
+            let user = await User.findById(id);
 
             user = {
-                ...user[0],
+                ...user,
                 userType: "basic"
             }
 
