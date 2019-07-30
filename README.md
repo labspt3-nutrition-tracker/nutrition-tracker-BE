@@ -201,7 +201,7 @@ Or to use an already existing API to get started:
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId mutation"
-    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/addUser.png"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/Jamar-Torres/Images/UserImages/addUser.png"
   </p>
 
 #### updateUser: this mutation edits an existing user entry in the API. Like the addUser, it requires the same mandatory arguments. Only weight is optional
