@@ -79,13 +79,9 @@ module.exports = {
                     amount_paid: 1000
                 }
 
-                console.log("create",user)
-
                 await Billing.add(billingInfo)
 
-                console.log("user info", user)
                 const newUser = await User.edit(user.id, user);
-                console.log(newUser)
                 return newUser;
             }
         },
@@ -103,12 +99,15 @@ module.exports = {
             const billingInfo = await Billing.findLastById(id)
             const { date } = billingInfo;
 
-            const momentDate = moment(date).format('ddd MMMM D YYYY');
-            const today = moment();
-            if(today.diff(momentDate, 'days') > 30){
-                const newUser = await User.edit(id, user)
+            const momentDate = moment(date)
+            const today = moment()
 
-                return newUser;
+            if(today.diff(momentDate, 'days') > 30){
+                await User.edit(id, user)
+                return 1;
+            }else{
+                User.findBy({"id": id});
+                return 1;
             }
         }
     }
