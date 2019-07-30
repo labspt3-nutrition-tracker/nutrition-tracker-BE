@@ -215,7 +215,7 @@ Or to use an already existing API to get started:
 
   <p align="center">
     <img alt="getExerciseEntriesByUserId mutation"
-    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/UserImages/updateUser.png"
+    src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/Jamar-Torres/Images/UserImages/updateUser.png"
   </p>
 
 #### deleteUser: this mutation deletes a user from the API
