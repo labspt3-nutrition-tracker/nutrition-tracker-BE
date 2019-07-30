@@ -31,6 +31,9 @@
 * [Messages Model](#Messages-Model)
     * [Messages Queries](#Messages---Queries)
     * [Messages Mutations](#Messages---Mutations)
+* [Billing Model](#Billing-Model)
+    * [Billing Queries](#Billing---Queries)
+    * [Billing Mutations](#Billing---Mutations)    
 * [License](#License)
 
 
@@ -690,6 +693,52 @@ The following is an example of an addMessage mutation
   <p align="center">
     <img alt="deleteMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
   </p>
+
+
+## Billing Model
+
+The following are the data that can be returned in a Billing Model Queries:
+
+  * id: ID!
+  * date: Date!
+  * user_id: User!
+  * amount_paid: Int!
+
+### **Billing - Queries**
+
+#### getBillingHistory: this query uses the user_id as an arguments to query the billing history of a user. It returns an object with all the payments a user has made.
+
+  The following is an example of a getBillingHistory query:
+
+  <p align="center">
+    <img alt="getBillingHistory query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/getBillingHistory.png">
+  </p>
+
+#### getRecentBilling: this query uses the user_id as an argument to query the most recent payment a user has made. It returns an object just the most recent payment. If a user has not upgraded, it returns null.
+
+  The following is an example of a getRecentBilling query:
+
+  <p align="center">
+    <img alt="getRecentBilling query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/getRecentBilling.png">
+  </p>  
+
+### **Billing - Mutations**  
+
+#### createSubscription: this mutation uses three argument: source, email, and amount. The source is a String that stripe sends back as a temporary made up number for charging a card, the email is a user's email, and the amount is 700 (premium) or 1000 (coach) depending on the user type.
+
+  The following is an example of a createSubscription mutation:
+
+  <p align="center">
+    <img alt="createSubscription mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/createSubscription.png">
+  </p>
+
+#### updateUserType: This mutation updates a user's userType to a basic user if the date from the last payment is greater than 30 days. It returns a value of 1 as a response.
+
+  The following is an example of a updateUserType mutation:
+
+  <p align="center">
+    <img alt="updateUserType mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/updateUserType.png">
+  </p>   
 
 ## License
 
