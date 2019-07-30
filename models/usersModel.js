@@ -30,12 +30,9 @@ async function add(user) {
 }
 
 async function edit(id, changes) {
-
-  console.log("info", changes)
   await db("users")
     .where("id", id)
     .update(changes);
-
 
   return findById(id);
 }

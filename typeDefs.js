@@ -68,7 +68,7 @@ module.exports = gql`
     #//*User
     addUser(input: UserInput!): User!
     deleteUser(id: ID!): Int!
-    updateUser(id: ID!, input: UserInput!): User!
+    updateUser(id: ID!, input: UserInput!): User
 
     #//*FoodCategory
     addFoodCategory(input: FoodCategoryInput!): FoodCategory!

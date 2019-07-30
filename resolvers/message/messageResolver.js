@@ -1,5 +1,5 @@
-const Message = require("../models/messagesModel");
-const User = require("../models/usersModel");
+const Message = require("../../models/messagesModel");
+const User = require("../../models/usersModel");
 
 module.exports = {
   Query: {

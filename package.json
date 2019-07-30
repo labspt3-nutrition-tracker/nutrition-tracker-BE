@@ -7,7 +7,11 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose",
     "server": "nodemon index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "dependencies": {
     "apollo-server": "^2.5.0",
@@ -23,6 +27,9 @@
     "stripe": "^7.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.0"
+    "cross-env": "^5.2.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
   }
 }
