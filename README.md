@@ -109,7 +109,6 @@ Or to use an already existing API to get started:
   > * id
   > * firstName
   > * lastName
-  > * username
   > * email
   > * userType
   > * calorieGoal
@@ -193,7 +192,6 @@ Or to use an already existing API to get started:
 
       firstName: String!
       lastName: String!
-      username: String!
       email: String!
       userType: String!
       calorieGoal: Int!
