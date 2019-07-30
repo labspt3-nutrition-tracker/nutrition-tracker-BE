@@ -710,7 +710,7 @@ The following are the data that can be returned in a Billing Model Queries:
   The following is an example of a getBillingHistory query:
 
   <p align="center">
-    <img alt="getBillingHistory query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
+    <img alt="getBillingHistory query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/getBillingHistory.png">
   </p>
 
 ### getRecentBilling: this query uses the user_id as an argument to query the most recent payment a user has made. It returns an object just the most recent payment. If a user has not upgraded, it returns null.
@@ -718,7 +718,7 @@ The following are the data that can be returned in a Billing Model Queries:
   The following is an example of a getRecentBilling query:
 
   <p align="center">
-    <img alt="getRecentBilling query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
+    <img alt="getRecentBilling query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/getRecentBilling.png">
   </p>  
 
 ### **Billing - Mutations**  
@@ -728,16 +728,17 @@ The following are the data that can be returned in a Billing Model Queries:
   The following is an example of a createSubscription mutation:
 
   <p align="center">
-    <img alt="createSubscription mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
+    <img alt="createSubscription mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/createSubscription.png">
   </p>
 
 #### updateUserType: This mutation updates a user's userType to a basic user if the date from the last payment is greater than 30 days. It returns a value of 1 as a response.
 
-    The following is an example of a updateUserType mutation:
+  The following is an example of a updateUserType mutation:
 
-    <p align="center">
-      <img alt="updateUserType mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
-    </p>   
+  <p align="center">
+    <img alt="updateUserType mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/updateUserType.png">
+  </p>   
+
 ## License
 
 > You can check the full license [here](https://github.com/labspt3-nutrition-tracker/nutrition-tracker-FE/blob/david-chua/client/LICENSE)
