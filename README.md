@@ -694,7 +694,8 @@ The following is an example of an addMessage mutation
     <img alt="deleteMessage mutation" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/MessagesImages/deleteMessage.png">
   </p>
 
-##Billing Model
+
+## Billing Model
 
 The following are the data that can be returned in a Billing Model Queries:
 
@@ -713,7 +714,7 @@ The following are the data that can be returned in a Billing Model Queries:
     <img alt="getBillingHistory query" src="https://github.com/labspt3-nutrition-tracker/nutrition-tracker-BE/blob/david-chua/Images/BillingImages/getBillingHistory.png">
   </p>
 
-### getRecentBilling: this query uses the user_id as an argument to query the most recent payment a user has made. It returns an object just the most recent payment. If a user has not upgraded, it returns null.
+#### getRecentBilling: this query uses the user_id as an argument to query the most recent payment a user has made. It returns an object just the most recent payment. If a user has not upgraded, it returns null.
 
   The following is an example of a getRecentBilling query:
 
