@@ -15,21 +15,21 @@
   },
   "dependencies": {
     "apollo-server": "^2.14.2",
-    "dotenv": "^8.0.0",
-    "google-auth-library": "^4.0.0",
-    "graphql": "^14.3.0",
+    "dotenv": "^10.0.0",
+    "google-auth-library": "^7.1.0",
+    "graphql": "^15.5.0",
     "graphql-merge-resolvers": "^1.1.10",
-    "knex": "^0.19.5",
+    "knex": "^0.95.6",
     "lodash": "^4.17.21",
     "moment": "^2.24.0",
-    "pg": "^7.11.0",
-    "sqlite3": "^4.0.8",
-    "stripe": "^7.1.0"
+    "pg": "^8.6.0",
+    "sqlite3": "^5.0.2",
+    "stripe": "^8.149.0"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
-    "jest": "^24.8.0",
-    "nodemon": "^1.19.0",
-    "supertest": "^4.0.2"
+    "cross-env": "^7.0.3",
+    "jest": "^27.0.1",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
   }
 }
