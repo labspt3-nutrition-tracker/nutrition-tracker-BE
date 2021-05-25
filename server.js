@@ -15,7 +15,7 @@ const server = new ApolloServer({
   cors: {
     origin: '*',
     credentials: true
-  }
+  },
   context: async ({ req }) => {
     let authToken = null;
     let currentUser = null;
