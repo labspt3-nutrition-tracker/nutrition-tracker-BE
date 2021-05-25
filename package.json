@@ -14,7 +14,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "apollo-server": "^2.5.0",
+    "apollo-server": "^2.14.2",
     "dotenv": "^8.0.0",
     "google-auth-library": "^4.0.0",
     "graphql": "^14.3.0",
