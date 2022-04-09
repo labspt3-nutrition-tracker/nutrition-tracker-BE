@@ -21,7 +21,7 @@
     "graphql-merge-resolvers": "^1.1.10",
     "knex": "^0.95.6",
     "lodash": "^4.17.21",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "pg": "^8.6.0",
     "sqlite3": "^5.0.2",
     "stripe": "^8.149.0"
