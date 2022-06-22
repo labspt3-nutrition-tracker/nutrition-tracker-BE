@@ -23,7 +23,7 @@
     "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "pg": "^8.6.0",
-    "sqlite3": "^5.0.2",
+    "sqlite3": "^5.0.3",
     "stripe": "^8.149.0"
   },
   "devDependencies": {
