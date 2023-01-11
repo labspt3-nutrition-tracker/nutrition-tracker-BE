@@ -19,7 +19,7 @@
     "google-auth-library": "^7.1.0",
     "graphql": "^15.5.0",
     "graphql-merge-resolvers": "^1.1.10",
-    "knex": "^0.95.6",
+    "knex": "^2.4.0",
     "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "pg": "^8.6.0",
